@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/widgets/about_me_section.dart';
+import 'package:portfolio/widgets/contact_me_section.dart';
 import 'package:portfolio/widgets/identification_section.dart';
 
 void main() {
@@ -30,6 +31,7 @@ class HomePage extends StatelessWidget {
           children: [
             IdentificationSection(),
             AboutMeSection(),
+            ContactMeSection(),
           ],
         ),
       ),

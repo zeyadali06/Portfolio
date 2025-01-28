@@ -13,7 +13,7 @@ class CustomAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     final List<AppBarButtonModel> buttons = [
       AppBarButtonModel(
-        text: 'About Me',
+        text: 'About',
         onPressed: () async {
           await Scrollable.ensureVisible(WidgetsKeys.aboutKey.currentContext!, duration: Duration(seconds: 1));
         },
@@ -27,7 +27,7 @@ class CustomAppBar extends StatelessWidget {
       AppBarButtonModel(
         text: 'Contact',
         onPressed: () async {
-          await Scrollable.ensureVisible(WidgetsKeys.contactKey.currentContext!, duration: Duration(seconds: 1));
+          await Scrollable.ensureVisible(WidgetsKeys.contactMeKey.currentContext!, duration: Duration(seconds: 1));
         },
       ),
     ];

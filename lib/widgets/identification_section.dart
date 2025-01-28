@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/utils/constants.dart';
-import 'package:portfolio/utils/widgets_keys.dart';
 import 'package:portfolio/widgets/custom_app_bar.dart';
 import 'package:portfolio/widgets/custom_widgets/custom_gradient_container.dart';
 import 'package:portfolio/widgets/identification_intro.dart';
@@ -12,7 +11,6 @@ class IdentificationSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomGradientContainer(
-      widgetKey: WidgetsKeys.homeKey,
       child: Column(
         children: [
           const SizedBox(height: 20),
