@@ -6,37 +6,29 @@ import 'package:portfolio/widgets/custom_widgets/computer_animation.dart';
 import 'package:portfolio/widgets/custom_widgets/custom_gradient_container.dart';
 import 'package:portfolio/widgets/custom_widgets/section_header.dart';
 
-class DesktopAboutMeSection extends StatelessWidget {
-  const DesktopAboutMeSection({super.key});
+class TabletAboutMeSection extends StatelessWidget {
+  const TabletAboutMeSection({super.key});
 
   @override
   Widget build(BuildContext context) {
     return CustomGradientContainer(
       widgetKey: WidgetsKeys.aboutKey,
       reverse: true,
-      padding: EdgeInsets.symmetric(horizontal: Constants.kDesktopHorizontalPadding),
       child: Column(
         children: [
           const SizedBox(height: Constants.kDesktopVerticalPadding),
           const SectionHeader(headerText: 'About Me'),
           const SizedBox(height: Constants.kDesktopVerticalPadding),
-          Row(
-            children: [
-              Container(
-                width: MediaQuery.sizeOf(context).width * .225,
-                padding: const EdgeInsets.only(right: Constants.kDesktopHorizontalPadding),
-                child: const ComputerAnimation(),
-              ),
-              const SizedBox(width: 20),
-              const Expanded(
-                child: Padding(
-                  padding: EdgeInsets.only(left: Constants.kDesktopHorizontalPadding),
-                  child: AboutMeText(),
-                ),
-              ),
-            ],
+          SizedBox(
+            width: MediaQuery.sizeOf(context).width * .30,
+            child: const ComputerAnimation(),
           ),
-          const SizedBox(height: Constants.kDesktopVerticalPadding),
+          const SizedBox(height: Constants.kTabletVerticalPadding),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: Constants.kTabletHorizontalPadding),
+            child: AboutMeText(),
+          ),
+          const SizedBox(height: Constants.kTabletVerticalPadding),
         ],
       ),
     );

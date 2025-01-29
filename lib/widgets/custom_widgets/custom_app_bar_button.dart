@@ -3,9 +3,10 @@ import 'package:portfolio/models/app_bar_button_model.dart';
 import 'package:portfolio/utils/responsive_font_size.dart';
 
 class CustomAppBarButton extends StatelessWidget {
-  const CustomAppBarButton({super.key, required this.model});
+  const CustomAppBarButton({super.key, required this.model, this.fontSize = 14});
 
   final AppBarButtonModel model;
+  final double fontSize;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class CustomAppBarButton extends StatelessWidget {
       ),
       child: Text(
         model.text,
-        style: TextStyle(color: Colors.white, fontSize: getResponsiveFontSize(14, context)),
+        style: TextStyle(color: Colors.white, fontSize: getResponsiveFontSize(fontSize, context)),
       ),
     );
   }

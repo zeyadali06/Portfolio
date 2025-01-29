@@ -7,7 +7,8 @@ class ComputerAnimation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return AspectRatio(
+      aspectRatio: 1,
       child: AvatarGlow(
         glowRadiusFactor: .20,
         glowColor: Colors.blueAccent,

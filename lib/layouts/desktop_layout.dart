@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/widgets/custom_widgets/custom_single_child_scroll_view.dart';
 import 'package:portfolio/widgets/desktop_about_me_section.dart';
 import 'package:portfolio/widgets/desktop_contact_me_section.dart';
 import 'package:portfolio/widgets/desktop_projects_section.dart';
@@ -9,20 +10,15 @@ class DesktopLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Theme(
-        data: ThemeData(
-          scrollbarTheme: const ScrollbarThemeData(thumbColor: WidgetStatePropertyAll(Colors.grey)),
-        ),
-        child: SingleChildScrollView(
-          child: Column(
-            children: const [
-              DesktopIdentificationSection(),
-              DesktopAboutMeSection(),
-              DesktopProjectsSection(),
-              DesktopContactMeSection(),
-            ],
-          ),
+    return const Scaffold(
+      body: CustomSingleChildScrollView(
+        child: Column(
+          children: [
+            DesktopIdentificationSection(),
+            DesktopAboutMeSection(),
+            DesktopProjectsSection(),
+            DesktopContactMeSection(),
+          ],
         ),
       ),
     );

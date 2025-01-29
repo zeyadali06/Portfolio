@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/utils/responsive_font_size.dart';
 
-class IdentificationIntro extends StatelessWidget {
-  const IdentificationIntro({super.key});
+class IdentificationIntroText extends StatelessWidget {
+  const IdentificationIntroText({super.key});
 
   @override
   Widget build(BuildContext context) {
