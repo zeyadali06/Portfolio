@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/models/contact_me_item_model.dart';
 import 'package:portfolio/utils/responsive_font_size.dart';
 
-class ContactMeItem extends StatelessWidget {
-  const ContactMeItem({super.key, required this.model});
+class DesktopContactMeItem extends StatelessWidget {
+  const DesktopContactMeItem({super.key, required this.model});
 
   final ContactMeItemModel model;
 

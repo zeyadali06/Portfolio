@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/layouts/size_config.dart';
 
 double getResponsiveFontSize(double fontSize, BuildContext context) {
   double scaleFactor = _getScaleFactor(context);
@@ -10,9 +11,9 @@ double getResponsiveFontSize(double fontSize, BuildContext context) {
 
 double _getScaleFactor(BuildContext context) {
   double width = MediaQuery.of(context).size.width;
-  if (width < 600) {
+  if (width < SizeConfig.tablet) {
     return width / 400;
-  } else if (width < 900) {
+  } else if (width < SizeConfig.desktop) {
     return width / 700;
   } else {
     return width / 1000;

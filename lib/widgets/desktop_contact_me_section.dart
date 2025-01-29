@@ -8,10 +8,11 @@ import 'package:portfolio/utils/snackbar.dart';
 import 'package:portfolio/utils/widgets_keys.dart';
 import 'package:portfolio/widgets/custom_widgets/contact_me_item.dart';
 import 'package:portfolio/widgets/custom_widgets/custom_gradient_container.dart';
+import 'package:portfolio/widgets/custom_widgets/section_header.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class ContactMeSection extends StatelessWidget {
-  const ContactMeSection({super.key});
+class DesktopContactMeSection extends StatelessWidget {
+  const DesktopContactMeSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -59,10 +60,7 @@ class ContactMeSection extends StatelessWidget {
       child: Column(
         children: [
           const SizedBox(height: 50),
-          Text(
-            'Contact Me',
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: getResponsiveFontSize(32, context)),
-          ),
+          const SectionHeader(headerText: 'Contact Me'),
           const SizedBox(height: 50),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -75,7 +73,7 @@ class ContactMeSection extends StatelessWidget {
                     return Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        ContactMeItem(model: models[index]),
+                        DesktopContactMeItem(model: models[index]),
                         index >= 0 && index < models.length - 1 ? const SizedBox(height: 15) : const SizedBox(),
                       ],
                     );

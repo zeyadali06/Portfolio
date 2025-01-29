@@ -6,14 +6,14 @@ import 'package:portfolio/utils/widgets_keys.dart';
 import 'package:portfolio/widgets/custom_widgets/custom_app_bar_button.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({super.key});
+class DesktopCustomAppBar extends StatelessWidget {
+  const DesktopCustomAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
     final List<AppBarButtonModel> buttons = [
       AppBarButtonModel(
-        text: 'About',
+        text: 'About Me',
         onPressed: () async {
           await Scrollable.ensureVisible(WidgetsKeys.aboutKey.currentContext!, duration: Duration(seconds: 1));
         },
@@ -25,7 +25,7 @@ class CustomAppBar extends StatelessWidget {
         },
       ),
       AppBarButtonModel(
-        text: 'Contact',
+        text: 'Contact Me',
         onPressed: () async {
           await Scrollable.ensureVisible(WidgetsKeys.contactMeKey.currentContext!, duration: Duration(seconds: 1));
         },

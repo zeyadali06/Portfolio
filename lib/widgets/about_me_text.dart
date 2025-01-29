@@ -9,7 +9,6 @@ class AboutMeText extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const SizedBox(height: 50),
         Text(
           "Hi, I'm Zeyad, a passionate and dedicated Flutter Developer with a strong foundation in creating efficient and visually appealing mobile applications. I'm currently pursuing my studies at the Faculty of Computer and Information Science, specializing in Information Systems.",
           style: TextStyle(color: Colors.white70, fontSize: getResponsiveFontSize(14, context)),
@@ -29,7 +28,6 @@ class AboutMeText extends StatelessWidget {
           "When I'm not coding, I enjoy exploring new tools, refining my skills, and contributing to projects that inspire me.",
           style: TextStyle(color: Colors.white70, fontSize: getResponsiveFontSize(14, context)),
         ),
-        const SizedBox(height: 50),
       ],
     );
   }
