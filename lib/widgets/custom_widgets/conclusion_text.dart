@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/utils/responsive_font_size.dart';
+import 'package:zeyad_ali_portfolio/utils/responsive_font_size.dart';
 
 class ConclusionText extends StatelessWidget {
   const ConclusionText({super.key});
@@ -7,7 +7,7 @@ class ConclusionText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      'Thank you for visiting my portfolio!',
+      'Thank you for visiting my zeyad_ali_portfolio!',
       textAlign: TextAlign.center,
       style: TextStyle(color: Colors.white, fontSize: getResponsiveFontSize(24, context)),
     );

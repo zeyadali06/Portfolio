@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/models/project_model.dart';
-import 'package:portfolio/utils/constants.dart';
-import 'package:portfolio/utils/projects_manager.dart';
-import 'package:portfolio/utils/widgets_keys.dart';
-import 'package:portfolio/widgets/custom_widgets/custom_gradient_container.dart';
-import 'package:portfolio/widgets/custom_widgets/section_header.dart';
-import 'package:portfolio/widgets/custom_widgets/mobile_project_card.dart';
+import 'package:zeyad_ali_portfolio/models/project_model.dart';
+import 'package:zeyad_ali_portfolio/utils/constants.dart';
+import 'package:zeyad_ali_portfolio/utils/projects_manager.dart';
+import 'package:zeyad_ali_portfolio/utils/widgets_keys.dart';
+import 'package:zeyad_ali_portfolio/widgets/custom_widgets/custom_gradient_container.dart';
+import 'package:zeyad_ali_portfolio/widgets/custom_widgets/section_header.dart';
+import 'package:zeyad_ali_portfolio/widgets/custom_widgets/mobile_project_card.dart';
 
 class TabletProjectSection extends StatelessWidget {
   const TabletProjectSection({super.key});

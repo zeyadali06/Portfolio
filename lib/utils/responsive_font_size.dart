@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/layouts/size_config.dart';
+import 'package:zeyad_ali_portfolio/layouts/size_config.dart';
 
 double getResponsiveFontSize(double fontSize, BuildContext context) {
   double scaleFactor = _getScaleFactor(context);

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/utils/constants.dart';
-import 'package:portfolio/utils/responsive_font_size.dart';
+import 'package:zeyad_ali_portfolio/utils/constants.dart';
+import 'package:zeyad_ali_portfolio/utils/responsive_font_size.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class DownloadCVButton extends StatelessWidget {

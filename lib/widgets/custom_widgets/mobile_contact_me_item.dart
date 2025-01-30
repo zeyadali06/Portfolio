@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/models/contact_me_item_model.dart';
-import 'package:portfolio/widgets/custom_widgets/custom_item_container.dart';
+import 'package:zeyad_ali_portfolio/models/contact_me_item_model.dart';
+import 'package:zeyad_ali_portfolio/widgets/custom_widgets/custom_item_container.dart';
 
 class MobileContactMeItem extends StatelessWidget {
   const MobileContactMeItem({super.key, required this.model});

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/utils/responsive_font_size.dart';
+import 'package:zeyad_ali_portfolio/utils/responsive_font_size.dart';
 
 class IdentificationIntroText extends StatelessWidget {
   const IdentificationIntroText({super.key});

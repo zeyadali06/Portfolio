@@ -1,6 +1,6 @@
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio/utils/assets.dart';
+import 'package:zeyad_ali_portfolio/utils/assets.dart';
 
 class ProfileImage extends StatelessWidget {
   const ProfileImage({super.key});

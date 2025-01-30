@@ -1,7 +1,7 @@
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:portfolio/utils/assets.dart';
+import 'package:zeyad_ali_portfolio/utils/assets.dart';
 
 class ComputerAnimation extends StatelessWidget {
   const ComputerAnimation({super.key});

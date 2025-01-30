@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/layouts/adaptive_layout.dart';
+import 'package:zeyad_ali_portfolio/layouts/adaptive_layout.dart';
 
 void main() {
   runApp(const MyApp());

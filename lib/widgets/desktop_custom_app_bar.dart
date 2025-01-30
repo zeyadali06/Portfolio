@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/models/app_bar_button_model.dart';
-import 'package:portfolio/utils/assets.dart';
-import 'package:portfolio/utils/widgets_keys.dart';
-import 'package:portfolio/widgets/custom_widgets/custom_app_bar_button.dart';
-import 'package:portfolio/widgets/custom_widgets/download_cv_button.dart';
-import 'package:portfolio/widgets/custom_widgets/logo.dart';
+import 'package:zeyad_ali_portfolio/models/app_bar_button_model.dart';
+import 'package:zeyad_ali_portfolio/utils/assets.dart';
+import 'package:zeyad_ali_portfolio/utils/widgets_keys.dart';
+import 'package:zeyad_ali_portfolio/widgets/custom_widgets/custom_app_bar_button.dart';
+import 'package:zeyad_ali_portfolio/widgets/custom_widgets/download_cv_button.dart';
+import 'package:zeyad_ali_portfolio/widgets/custom_widgets/logo.dart';
 
 class DesktopCustomAppBar extends StatelessWidget {
   const DesktopCustomAppBar({super.key});

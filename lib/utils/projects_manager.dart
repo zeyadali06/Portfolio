@@ -1,8 +1,8 @@
 // ignore_for_file: constant_identifier_names
 
-import 'package:portfolio/models/project_model.dart';
-import 'package:portfolio/models/tool_model.dart';
-import 'package:portfolio/utils/assets.dart';
+import 'package:zeyad_ali_portfolio/models/project_model.dart';
+import 'package:zeyad_ali_portfolio/models/tool_model.dart';
+import 'package:zeyad_ali_portfolio/utils/assets.dart';
 
 final class ProjectsManager {
   static Map<ToolType, ToolModel> allTools = {

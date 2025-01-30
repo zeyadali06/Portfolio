@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/utils/constants.dart';
-import 'package:portfolio/utils/widgets_keys.dart';
-import 'package:portfolio/widgets/custom_widgets/custom_gradient_container.dart';
-import 'package:portfolio/widgets/custom_widgets/profile_image.dart';
-import 'package:portfolio/widgets/identification_intro_text.dart';
+import 'package:zeyad_ali_portfolio/utils/constants.dart';
+import 'package:zeyad_ali_portfolio/utils/widgets_keys.dart';
+import 'package:zeyad_ali_portfolio/widgets/custom_widgets/custom_gradient_container.dart';
+import 'package:zeyad_ali_portfolio/widgets/custom_widgets/profile_image.dart';
+import 'package:zeyad_ali_portfolio/widgets/identification_intro_text.dart';
 
 class TabletIdentificationSection extends StatelessWidget {
   const TabletIdentificationSection({super.key});

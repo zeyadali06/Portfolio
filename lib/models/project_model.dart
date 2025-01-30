@@ -1,4 +1,4 @@
-import 'package:portfolio/models/tool_model.dart';
+import 'package:zeyad_ali_portfolio/models/tool_model.dart';
 
 class ProjectModel {
   final String title;

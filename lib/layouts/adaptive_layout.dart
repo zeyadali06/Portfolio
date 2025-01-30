@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/layouts/desktop_layout.dart';
-import 'package:portfolio/layouts/mobile_layout.dart';
-import 'package:portfolio/layouts/size_config.dart';
-import 'package:portfolio/layouts/tablet_layout.dart';
+import 'package:zeyad_ali_portfolio/layouts/desktop_layout.dart';
+import 'package:zeyad_ali_portfolio/layouts/mobile_layout.dart';
+import 'package:zeyad_ali_portfolio/layouts/size_config.dart';
+import 'package:zeyad_ali_portfolio/layouts/tablet_layout.dart';
 
 class AdaptiveLayout extends StatelessWidget {
   const AdaptiveLayout({super.key});

@@ -1,10 +1,10 @@
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:portfolio/models/project_model.dart';
-import 'package:portfolio/utils/responsive_font_size.dart';
-import 'package:portfolio/widgets/custom_widgets/custom_item_container.dart';
-import 'package:portfolio/widgets/custom_widgets/tool_item.dart';
+import 'package:zeyad_ali_portfolio/models/project_model.dart';
+import 'package:zeyad_ali_portfolio/utils/responsive_font_size.dart';
+import 'package:zeyad_ali_portfolio/widgets/custom_widgets/custom_item_container.dart';
+import 'package:zeyad_ali_portfolio/widgets/custom_widgets/tool_item.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class DesktopProjectCard extends StatelessWidget {
