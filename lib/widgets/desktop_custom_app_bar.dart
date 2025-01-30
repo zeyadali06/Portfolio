@@ -33,7 +33,7 @@ class DesktopCustomAppBar extends StatelessWidget {
     ];
     return Row(
       children: [
-        const Logo(imagePath: Assets.androidLogo),
+        const Logo(imagePath: Assets.imagesAndroidLogo),
         const SizedBox(width: 20),
         Expanded(
           child: Container(
@@ -69,7 +69,7 @@ class DesktopCustomAppBar extends StatelessWidget {
           ),
         ),
         const SizedBox(width: 20),
-        const Logo(imagePath: Assets.appleLogo),
+        const Logo(imagePath: Assets.imagesAppleLogo),
       ],
     );
   }

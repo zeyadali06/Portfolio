@@ -25,9 +25,9 @@ class CustomDrawer extends StatelessWidget {
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    const Logo(imagePath: Assets.androidLogo),
+                    const Logo(imagePath: Assets.imagesAndroidLogo),
                     const SizedBox(width: 10),
-                    const Logo(imagePath: Assets.appleLogo),
+                    const Logo(imagePath: Assets.imagesAppleLogo),
                   ],
                 ),
               ),

@@ -39,7 +39,7 @@ class ProfileImage extends StatelessWidget {
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               image: DecorationImage(
-                image: AssetImage(Assets.profileImage),
+                image: AssetImage(Assets.imagesProfileImage),
                 fit: BoxFit.contain,
               ),
             ),

@@ -43,13 +43,22 @@ dev_dependencies:
     sdk: flutter
 
 flutter_launcher_icons:
-  adaptive_icon_background: "assets/images/AndroidIcon.png"
-  adaptive_icon_foreground: "assets/images/Background.png"
+  ios: false
+  image_path: "assets/images/app_icon.png"
+  android:
+    min_sdk_android: 21
+    # adaptive_icon_foreground_inset: 20
   web:
     generate: true
-    image_path: "assets/images/AndroidIcon.png"
     background_color: "#008000"
     theme_color: "#008000"
+  windows:
+    generate: true
+    image_path: "assets/images/app_icon.png"
+    icon_size: 48
+  macos:
+    generate: true
+    image_path: "assets/images/app_icon.png"
 
 flutter_assets:
   assets_path:

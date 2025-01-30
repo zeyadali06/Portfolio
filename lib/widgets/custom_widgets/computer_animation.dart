@@ -20,7 +20,7 @@ class ComputerAnimation extends StatelessWidget {
         glowShape: BoxShape.circle,
         child: Padding(
           padding: const EdgeInsets.all(10),
-          child: Lottie.asset(Assets.computerAnimation1),
+          child: Lottie.asset(Assets.animationsComputerAnimation1),
         ),
       ),
     );
