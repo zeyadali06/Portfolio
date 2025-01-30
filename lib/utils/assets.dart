@@ -32,22 +32,22 @@ class Assets {
 
   /// Assets for projects_prototypesFashionApp
   /// assets/projects_prototypes/FashionApp.png
-  static const String projects_prototypesFashionApp = "assets/projects_prototypes/FashionApp.png";
+  static const String projectsPrototypesFashionApp = "assets/projects_prototypes/FashionApp.png";
 
   /// Assets for projects_prototypesMealRecommendationApp
   /// assets/projects_prototypes/MealRecommendationApp.png
-  static const String projects_prototypesMealRecommendationApp = "assets/projects_prototypes/MealRecommendationApp.png";
+  static const String projectsPrototypesMealRecommendationApp = "assets/projects_prototypes/MealRecommendationApp.png";
 
   /// Assets for projects_prototypesMiniInstapayApp
   /// assets/projects_prototypes/MiniInstapayApp.png
-  static const String projects_prototypesMiniInstapayApp = "assets/projects_prototypes/MiniInstapayApp.png";
+  static const String projectsPrototypesMiniInstapayApp = "assets/projects_prototypes/MiniInstapayApp.png";
 
   /// Assets for projects_prototypesTennisApp
   /// assets/projects_prototypes/TennisApp.png
-  static const String projects_prototypesTennisApp = "assets/projects_prototypes/TennisApp.png";
+  static const String projectsPrototypesTennisApp = "assets/projects_prototypes/TennisApp.png";
 
   /// Assets for projects_prototypesToDoApp
   /// assets/projects_prototypes/ToDoApp.png
-  static const String projects_prototypesToDoApp = "assets/projects_prototypes/ToDoApp.png";
+  static const String projectsPrototypesToDoApp = "assets/projects_prototypes/ToDoApp.png";
 }
 
