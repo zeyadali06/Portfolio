@@ -1,3 +1,4 @@
+import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/models/project_model.dart';
@@ -55,17 +56,33 @@ class DesktopProjectCard extends StatelessWidget {
                     const SizedBox(height: 15),
                     Row(
                       children: [
-                        IconButton(
-                          onPressed: () async => await launchUrl(Uri.parse(project.githubUrl)),
-                          color: Colors.grey[850],
-                          icon: Icon(FontAwesomeIcons.github, color: Colors.white),
+                        AvatarGlow(
+                          glowColor: Colors.grey,
+                          duration: Duration(seconds: 2),
+                          glowRadiusFactor: .15,
+                          repeat: true,
+                          animate: true,
+                          curve: Curves.easeInOutCubic,
+                          child: IconButton(
+                            onPressed: () async => await launchUrl(Uri.parse(project.githubUrl)),
+                            color: Colors.grey[850],
+                            icon: Icon(FontAwesomeIcons.github, color: Colors.white),
+                          ),
                         ),
                         const SizedBox(width: 10),
                         if (project.designUrl != null)
-                          IconButton(
-                            onPressed: () async => await launchUrl(Uri.parse(project.designUrl!)),
-                            color: Colors.grey[850],
-                            icon: Icon(FontAwesomeIcons.figma, color: Colors.white),
+                          AvatarGlow(
+                            glowColor: Colors.grey,
+                            duration: Duration(seconds: 2),
+                            glowRadiusFactor: .15,
+                            repeat: true,
+                            animate: true,
+                            curve: Curves.easeInOutCubic,
+                            child: IconButton(
+                              onPressed: () async => await launchUrl(Uri.parse(project.designUrl!)),
+                              color: Colors.grey[850],
+                              icon: Icon(FontAwesomeIcons.figma, color: Colors.white),
+                            ),
                           ),
                       ],
                     )

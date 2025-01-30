@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/utils/constants.dart';
 import 'package:portfolio/widgets/desktop_custom_app_bar.dart';
 import 'package:portfolio/widgets/custom_widgets/custom_gradient_container.dart';
@@ -16,11 +15,6 @@ class DesktopIdentificationSection extends StatelessWidget {
       child: Column(
         children: [
           const SizedBox(height: 20),
-          const Icon(
-            FontAwesomeIcons.android,
-            size: 48,
-            color: Colors.white,
-          ),
           DesktopCustomAppBar(),
           const SizedBox(height: Constants.kDesktopVerticalPadding),
           Row(

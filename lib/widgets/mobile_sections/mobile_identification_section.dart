@@ -30,7 +30,7 @@ class MobileIdentificationSection extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           const IdentificationIntroText(),
-          const SizedBox(height: 20),
+          const SizedBox(height: Constants.kMobileVerticalPadding),
         ],
       ),
     );

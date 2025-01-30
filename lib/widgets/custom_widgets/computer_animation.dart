@@ -1,6 +1,7 @@
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:portfolio/utils/assets.dart';
 
 class ComputerAnimation extends StatelessWidget {
   const ComputerAnimation({super.key});
@@ -19,7 +20,7 @@ class ComputerAnimation extends StatelessWidget {
         glowShape: BoxShape.circle,
         child: Padding(
           padding: const EdgeInsets.all(10),
-          child: Lottie.asset("assets/animations/Computer Animation1.json"),
+          child: Lottie.asset(Assets.computerAnimation1),
         ),
       ),
     );

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/models/app_bar_button_model.dart';
-import 'package:portfolio/utils/responsive_font_size.dart';
+import 'package:portfolio/utils/assets.dart';
 import 'package:portfolio/utils/widgets_keys.dart';
 import 'package:portfolio/widgets/custom_widgets/custom_app_bar_button.dart';
 import 'package:portfolio/widgets/custom_widgets/custom_gradient_container.dart';
 import 'package:portfolio/widgets/custom_widgets/custom_single_child_scroll_view.dart';
 import 'package:portfolio/widgets/custom_widgets/download_cv_button.dart';
+import 'package:portfolio/widgets/custom_widgets/logo.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key, required this.scaffoldKey});
@@ -22,17 +22,12 @@ class CustomDrawer extends StatelessWidget {
             children: [
               const SizedBox(height: 50),
               DrawerHeader(
-                child: Column(
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
                   children: [
-                    const Icon(
-                      FontAwesomeIcons.android,
-                      size: 32,
-                      color: Colors.white,
-                    ),
-                    Text(
-                      'Zeyad Ali',
-                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: getResponsiveFontSize(28, context)),
-                    ),
+                    const Logo(imagePath: Assets.androidLogo),
+                    const SizedBox(width: 10),
+                    const Logo(imagePath: Assets.appleLogo),
                   ],
                 ),
               ),

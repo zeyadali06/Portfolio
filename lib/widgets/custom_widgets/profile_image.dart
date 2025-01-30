@@ -1,5 +1,6 @@
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
+import 'package:portfolio/utils/assets.dart';
 
 class ProfileImage extends StatelessWidget {
   const ProfileImage({super.key});
@@ -38,7 +39,7 @@ class ProfileImage extends StatelessWidget {
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               image: DecorationImage(
-                image: AssetImage('assets/images/profile_image.jpg'),
+                image: AssetImage(Assets.profileImage),
                 fit: BoxFit.contain,
               ),
             ),

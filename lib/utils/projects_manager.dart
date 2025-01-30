@@ -2,6 +2,7 @@
 
 import 'package:portfolio/models/project_model.dart';
 import 'package:portfolio/models/tool_model.dart';
+import 'package:portfolio/utils/assets.dart';
 
 final class ProjectsManager {
   static Map<ToolType, ToolModel> allTools = {
@@ -47,7 +48,7 @@ final class ProjectsManager {
         title: 'Mini Instapay App',
         description:
             "The Mini InstaPay App is a Flutter-based financial app for seamless money transfers, account management, usage reports, and real-time notifications.\nIn this project, my role was implementing real-time notifications using Socket.io and generating financial reports to help users track their transactions effectively.",
-        imagePath: "assets/projects_prototypes/Mini instapay.png",
+        imagePath: Assets.prototypesMiniInstapayApp,
         tools: _getTool(
           [
             ToolType.flutter,
@@ -67,7 +68,7 @@ final class ProjectsManager {
         title: "Meal Recommendation App",
         description:
             "The Meal Recommendation App is a Flutter-based app that suggests meals based on user preferences. It uses Firebase for authentication and the Gemini AI model for recommendations. Users receive personalized meal suggestions along with ingredient lists.\nIn this project, my role included developing the splash screen, profile screen, meal details screen, and implementing the favorite icon functionality to allow users to save their preferred meals.",
-        imagePath: "assets/projects_prototypes/Meal Recommendation App.png",
+        imagePath: Assets.prototypesMealRecommendationApp,
         tools: _getTool(
           [
             ToolType.flutter,
@@ -90,7 +91,7 @@ final class ProjectsManager {
         title: 'Tennis App',
         description:
             "The Tennis Player Training Prediction App helps players plan training sessions using weather forecasts. Built with Flutter, it supports location management, authentication, and a clean MVVM architecture. It integrates a machine learning model to predict optimal training times based on weather data.",
-        imagePath: "assets/projects_prototypes/Tennis App.png",
+        imagePath: Assets.prototypesTennisApp,
         tools: _getTool(
           [
             ToolType.flutter,
@@ -109,7 +110,7 @@ final class ProjectsManager {
         title: "Fashion App",
         description:
             "The Fashion App, built with Flutter, offers a seamless shopping experience for clothing items. It features user authentication, profile management, and organized categories for easy browsing. Users can view product details, manage their cart, and track orders effortlessly.",
-        imagePath: "assets/projects_prototypes/Fashion App.png",
+        imagePath: Assets.prototypesFashionApp,
         tools: _getTool(
           [
             ToolType.flutter,
@@ -129,7 +130,7 @@ final class ProjectsManager {
         title: 'ToDo App',
         description:
             "The To-Do List App is a Flutter-based application designed to help users manage their daily tasks efficiently. It offers a user-friendly interface where tasks can be added, marked as completed, or deleted. Users can categorize tasks into custom lists and set priorities, making it easier to focus on what matters most.",
-        imagePath: "assets/projects_prototypes/ToDo App.png",
+        imagePath: Assets.prototypesToDoApp,
         tools: _getTool(
           [
             ToolType.flutter,
