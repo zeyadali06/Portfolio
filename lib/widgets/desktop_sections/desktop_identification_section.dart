@@ -12,6 +12,7 @@ class DesktopIdentificationSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomGradientContainer(
+      padding: EdgeInsets.symmetric(horizontal: Constants.kDesktopHorizontalPadding),
       child: Column(
         children: [
           const SizedBox(height: 20),
@@ -20,23 +21,16 @@ class DesktopIdentificationSection extends StatelessWidget {
             size: 48,
             color: Colors.white,
           ),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: Constants.kDesktopHorizontalPadding),
-            child: DesktopCustomAppBar(),
-          ),
+          DesktopCustomAppBar(),
           const SizedBox(height: Constants.kDesktopVerticalPadding),
           Row(
             children: [
               const Expanded(
-                child: Padding(
-                  padding: EdgeInsets.only(left: Constants.kDesktopHorizontalPadding),
-                  child: IdentificationIntroText(),
-                ),
+                flex: 3,
+                child: IdentificationIntroText(),
               ),
-              const SizedBox(width: 20),
-              Container(
-                width: MediaQuery.sizeOf(context).width * .225,
-                padding: const EdgeInsets.only(right: Constants.kDesktopHorizontalPadding),
+              const SizedBox(width: 50),
+              Expanded(
                 child: const ProfileImage(),
               ),
             ],

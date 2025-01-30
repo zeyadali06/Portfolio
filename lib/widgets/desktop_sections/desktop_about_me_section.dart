@@ -22,17 +22,11 @@ class DesktopAboutMeSection extends StatelessWidget {
           const SizedBox(height: Constants.kDesktopVerticalPadding),
           Row(
             children: [
-              Container(
-                width: MediaQuery.sizeOf(context).width * .225,
-                padding: const EdgeInsets.only(right: Constants.kDesktopHorizontalPadding),
-                child: const ComputerAnimation(),
-              ),
-              const SizedBox(width: 20),
+              Expanded(child: const ComputerAnimation()),
+              const SizedBox(width: 50),
               const Expanded(
-                child: Padding(
-                  padding: EdgeInsets.only(left: Constants.kDesktopHorizontalPadding),
-                  child: AboutMeText(),
-                ),
+                flex: 3,
+                child: AboutMeText(),
               ),
             ],
           ),

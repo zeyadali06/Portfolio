@@ -6,8 +6,8 @@ import 'package:portfolio/widgets/custom_widgets/custom_item_container.dart';
 import 'package:portfolio/widgets/custom_widgets/tool_item.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class TabletProjectCard extends StatelessWidget {
-  const TabletProjectCard({super.key, required this.project});
+class MobileProjectCard extends StatelessWidget {
+  const MobileProjectCard({super.key, required this.project});
 
   final ProjectModel project;
 
@@ -31,7 +31,7 @@ class TabletProjectCard extends StatelessWidget {
               project.imagePath,
             ),
           ),
-          const SizedBox(width: 30),
+          const SizedBox(height: 10),
           Text(
             project.description,
             style: TextStyle(color: Colors.white60, fontSize: getResponsiveFontSize(14, context)),

@@ -8,6 +8,7 @@ class ConclusionText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       'Thank you for visiting my portfolio!',
+      textAlign: TextAlign.center,
       style: TextStyle(color: Colors.white, fontSize: getResponsiveFontSize(24, context)),
     );
   }

@@ -5,7 +5,7 @@ import 'package:portfolio/utils/projects_manager.dart';
 import 'package:portfolio/utils/widgets_keys.dart';
 import 'package:portfolio/widgets/custom_widgets/custom_gradient_container.dart';
 import 'package:portfolio/widgets/custom_widgets/section_header.dart';
-import 'package:portfolio/widgets/custom_widgets/tablet_project_card.dart';
+import 'package:portfolio/widgets/custom_widgets/mobile_project_card.dart';
 
 class TabletProjectSection extends StatelessWidget {
   const TabletProjectSection({super.key});
@@ -24,7 +24,7 @@ class TabletProjectSection extends StatelessWidget {
           OverflowBar(
             overflowSpacing: 15,
             children: List.generate(projects.length, (int index) {
-              return TabletProjectCard(project: projects[index]);
+              return MobileProjectCard(project: projects[index]);
             }),
           ),
           const SizedBox(height: Constants.kTabletVerticalPadding),

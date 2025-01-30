@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:portfolio/layouts/tablet_layout.dart';
 import 'package:portfolio/models/app_bar_button_model.dart';
 import 'package:portfolio/utils/responsive_font_size.dart';
 import 'package:portfolio/utils/widgets_keys.dart';
@@ -9,8 +8,10 @@ import 'package:portfolio/widgets/custom_widgets/custom_gradient_container.dart'
 import 'package:portfolio/widgets/custom_widgets/custom_single_child_scroll_view.dart';
 import 'package:portfolio/widgets/custom_widgets/download_cv_button.dart';
 
-class TabletLayoutDrawer extends StatelessWidget {
-  const TabletLayoutDrawer({super.key});
+class CustomDrawer extends StatelessWidget {
+  const CustomDrawer({super.key, required this.scaffoldKey});
+
+  final GlobalKey<ScaffoldState> scaffoldKey;
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +39,7 @@ class TabletLayoutDrawer extends StatelessWidget {
               CustomAppBarButton(
                 model: AppBarButtonModel(
                   onPressed: () async {
-                    TabletLayout.tabletLayoutKey.currentState?.closeEndDrawer();
+                    scaffoldKey.currentState?.closeEndDrawer();
                     await Scrollable.ensureVisible(WidgetsKeys.aboutKey.currentContext!, duration: Duration(seconds: 1));
                   },
                   text: 'About Me',
@@ -48,7 +49,7 @@ class TabletLayoutDrawer extends StatelessWidget {
               CustomAppBarButton(
                 model: AppBarButtonModel(
                   onPressed: () async {
-                    TabletLayout.tabletLayoutKey.currentState?.closeEndDrawer();
+                    scaffoldKey.currentState?.closeEndDrawer();
                     await Scrollable.ensureVisible(WidgetsKeys.projectsKey.currentContext!, duration: Duration(seconds: 1));
                   },
                   text: 'Projects',
@@ -58,7 +59,7 @@ class TabletLayoutDrawer extends StatelessWidget {
               CustomAppBarButton(
                 model: AppBarButtonModel(
                   onPressed: () async {
-                    TabletLayout.tabletLayoutKey.currentState?.closeEndDrawer();
+                    scaffoldKey.currentState?.closeEndDrawer();
                     await Scrollable.ensureVisible(WidgetsKeys.contactMeKey.currentContext!, duration: Duration(seconds: 1));
                   },
                   text: 'Contact Me',
