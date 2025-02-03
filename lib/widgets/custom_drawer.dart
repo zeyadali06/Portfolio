@@ -21,13 +21,13 @@ class CustomDrawer extends StatelessWidget {
           child: Column(
             children: [
               const SizedBox(height: 50),
-              DrawerHeader(
+              const DrawerHeader(
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    const Logo(imagePath: Assets.imagesAndroidLogo),
-                    const SizedBox(width: 10),
-                    const Logo(imagePath: Assets.imagesAppleLogo),
+                    Logo(imagePath: Assets.imagesAndroidLogo),
+                    SizedBox(width: 10),
+                    Logo(imagePath: Assets.imagesAppleLogo),
                   ],
                 ),
               ),
@@ -35,7 +35,7 @@ class CustomDrawer extends StatelessWidget {
                 model: AppBarButtonModel(
                   onPressed: () async {
                     scaffoldKey.currentState?.closeEndDrawer();
-                    await Scrollable.ensureVisible(WidgetsKeys.aboutKey.currentContext!, duration: Duration(seconds: 1));
+                    await Scrollable.ensureVisible(WidgetsKeys.aboutKey.currentContext!, duration: const Duration(seconds: 1));
                   },
                   text: 'About Me',
                 ),
@@ -45,7 +45,17 @@ class CustomDrawer extends StatelessWidget {
                 model: AppBarButtonModel(
                   onPressed: () async {
                     scaffoldKey.currentState?.closeEndDrawer();
-                    await Scrollable.ensureVisible(WidgetsKeys.projectsKey.currentContext!, duration: Duration(seconds: 1));
+                    await Scrollable.ensureVisible(WidgetsKeys.mySkillsKey.currentContext!, duration: const Duration(seconds: 1));
+                  },
+                  text: 'My Skills',
+                ),
+              ),
+              const SizedBox(height: 15),
+              CustomAppBarButton(
+                model: AppBarButtonModel(
+                  onPressed: () async {
+                    scaffoldKey.currentState?.closeEndDrawer();
+                    await Scrollable.ensureVisible(WidgetsKeys.projectsKey.currentContext!, duration: const Duration(seconds: 1));
                   },
                   text: 'Projects',
                 ),
@@ -55,7 +65,7 @@ class CustomDrawer extends StatelessWidget {
                 model: AppBarButtonModel(
                   onPressed: () async {
                     scaffoldKey.currentState?.closeEndDrawer();
-                    await Scrollable.ensureVisible(WidgetsKeys.contactMeKey.currentContext!, duration: Duration(seconds: 1));
+                    await Scrollable.ensureVisible(WidgetsKeys.contactMeKey.currentContext!, duration: const Duration(seconds: 1));
                   },
                   text: 'Contact Me',
                 ),

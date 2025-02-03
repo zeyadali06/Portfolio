@@ -14,7 +14,7 @@ class TabletAboutMeSection extends StatelessWidget {
     return CustomGradientContainer(
       widgetKey: WidgetsKeys.aboutKey,
       reverse: true,
-      padding: EdgeInsets.symmetric(horizontal: Constants.kTabletHorizontalPadding),
+      padding: const EdgeInsets.symmetric(horizontal: Constants.kTabletHorizontalPadding),
       child: Column(
         children: [
           const SizedBox(height: Constants.kTabletVerticalPadding),

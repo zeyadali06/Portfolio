@@ -9,14 +9,14 @@ class DownloadCVButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      onPressed: () async {
-        await launchUrl(Uri.parse(Constants.cvLink));
-      },
       color: const Color(0xff320d56),
-      padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
       highlightColor: Colors.transparent,
       splashColor: Colors.transparent,
+      onPressed: () async {
+        await launchUrl(Uri.parse(Constants.cvLink));
+      },
       child: Text(
         'Download CV',
         style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: getResponsiveFontSize(14, context)),

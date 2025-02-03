@@ -31,7 +31,7 @@ class IdentificationIntroText extends StatelessWidget {
           style: TextStyle(color: Colors.white, fontSize: getResponsiveFontSize(22, context), fontWeight: FontWeight.w600),
         ),
         const SizedBox(height: 25),
-        Text(
+        const Text(
           "Passionate Flutter Developer with extensive experience in creating user-focused mobile applications using Flutter, Bloc, and Clean Architecture. Proficient in state management, API integrations, Firebase, and AI model implementations. Skilled in crafting adaptive and responsive UIs while delivering innovative solutions to complex challenges.",
           style: TextStyle(color: Colors.white60),
         ),

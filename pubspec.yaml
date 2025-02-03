@@ -64,7 +64,8 @@ flutter_assets:
   assets_path:
     - assets/animations/
     - assets/images/
-    - assets/projects_prototypes/
+    - assets/projectsPrototypes/
+    - assets/skillsIcons/
   output_path: lib/utils/
   filename: assets.dart
   field_prefix:
@@ -82,7 +83,8 @@ flutter:
   assets:
     - assets/images/
     - assets/animations/
-    - assets/projects_prototypes/
+    - assets/projectsPrototypes/
+    - assets/skillsIcons/
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

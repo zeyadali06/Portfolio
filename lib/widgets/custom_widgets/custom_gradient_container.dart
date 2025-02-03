@@ -14,13 +14,12 @@ class CustomGradientContainer extends StatelessWidget {
       key: widgetKey,
       padding: padding,
       decoration: BoxDecoration(
-        border: Border.all(width: 0, color: Colors.black),
         gradient: LinearGradient(
           begin: reverse ? Alignment.centerRight : Alignment.centerLeft,
           end: reverse ? Alignment.centerLeft : Alignment.centerRight,
-          colors: [
+          colors: const [
             Colors.black,
-            const Color(0xff111827),
+            Color(0xff111827),
           ],
         ),
       ),

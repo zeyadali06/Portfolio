@@ -11,19 +11,10 @@ class TabletIdentificationSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomGradientContainer(
-      padding: EdgeInsets.symmetric(horizontal: Constants.kTabletHorizontalPadding),
+      padding: const EdgeInsets.symmetric(horizontal: Constants.kTabletHorizontalPadding),
       child: Column(
         children: [
-          const SizedBox(height: 20),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              IconButton(
-                onPressed: () => WidgetsKeys.tabletLayoutKey.currentState?.openEndDrawer(),
-                icon: Icon(Icons.menu, color: Colors.white),
-              ),
-            ],
-          ),
+          SizedBox(height: WidgetsKeys.tabletLayoutKey.currentState!.appBarMaxHeight! + 20),
           SizedBox(
             width: MediaQuery.sizeOf(context).width * .30,
             height: MediaQuery.sizeOf(context).width * .30,

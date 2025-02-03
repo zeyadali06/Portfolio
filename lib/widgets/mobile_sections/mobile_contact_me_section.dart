@@ -17,8 +17,7 @@ class MobileContactMeSection extends StatelessWidget {
 
     return CustomGradientContainer(
       widgetKey: WidgetsKeys.contactMeKey,
-      reverse: true,
-      padding: EdgeInsets.symmetric(horizontal: Constants.kMobileHorizontalPadding),
+      padding: const EdgeInsets.symmetric(horizontal: Constants.kMobileHorizontalPadding),
       child: Column(
         children: [
           const SizedBox(height: Constants.kMobileVerticalPadding),

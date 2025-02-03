@@ -11,15 +11,15 @@ class ProfileImage extends StatelessWidget {
       aspectRatio: 1,
       child: AvatarGlow(
         glowColor: const Color(0xff1400d1),
-        duration: Duration(seconds: 2),
+        duration: const Duration(seconds: 2),
         glowRadiusFactor: .20,
         repeat: true,
         animate: true,
         curve: Curves.easeInOutCubic,
         child: Container(
           clipBehavior: Clip.hardEdge,
-          padding: EdgeInsets.all(10),
-          decoration: BoxDecoration(
+          padding: const EdgeInsets.all(10),
+          decoration: const BoxDecoration(
             shape: BoxShape.circle,
             gradient: RadialGradient(
               colors: [
@@ -36,7 +36,7 @@ class ProfileImage extends StatelessWidget {
           ),
           child: Container(
             clipBehavior: Clip.hardEdge,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               shape: BoxShape.circle,
               image: DecorationImage(
                 image: AssetImage(Assets.imagesProfileImage),

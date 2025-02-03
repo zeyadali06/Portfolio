@@ -14,23 +14,23 @@ class DesktopAboutMeSection extends StatelessWidget {
     return CustomGradientContainer(
       widgetKey: WidgetsKeys.aboutKey,
       reverse: true,
-      padding: EdgeInsets.symmetric(horizontal: Constants.kDesktopHorizontalPadding),
-      child: Column(
+      padding: const EdgeInsets.symmetric(horizontal: Constants.kDesktopHorizontalPadding),
+      child: const Column(
         children: [
-          const SizedBox(height: Constants.kDesktopVerticalPadding),
-          const SectionHeader(headerText: 'About Me'),
-          const SizedBox(height: Constants.kDesktopVerticalPadding),
+          SizedBox(height: Constants.kDesktopVerticalPadding),
+          SectionHeader(headerText: 'About Me'),
+          SizedBox(height: Constants.kDesktopVerticalPadding),
           Row(
             children: [
-              Expanded(child: const ComputerAnimation()),
-              const SizedBox(width: 50),
-              const Expanded(
+              Expanded(child: ComputerAnimation()),
+              SizedBox(width: 50),
+              Expanded(
                 flex: 3,
                 child: AboutMeText(),
               ),
             ],
           ),
-          const SizedBox(height: Constants.kDesktopVerticalPadding),
+          SizedBox(height: Constants.kDesktopVerticalPadding),
         ],
       ),
     );

@@ -15,6 +15,7 @@ class DesktopProjectsSection extends StatelessWidget {
     final List<ProjectModel> projects = ProjectsManager.getProjects();
     return CustomGradientContainer(
       widgetKey: WidgetsKeys.projectsKey,
+      reverse: true,
       padding: const EdgeInsets.symmetric(horizontal: Constants.kDesktopHorizontalPadding),
       child: Column(
         children: [

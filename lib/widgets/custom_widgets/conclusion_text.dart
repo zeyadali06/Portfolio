@@ -7,7 +7,7 @@ class ConclusionText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      'Thank you for visiting my zeyad_ali_portfolio!',
+      'Thank you for visiting my portfolio!',
       textAlign: TextAlign.center,
       style: TextStyle(color: Colors.white, fontSize: getResponsiveFontSize(24, context)),
     );

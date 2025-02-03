@@ -13,7 +13,7 @@ class MobileAboutMeSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomGradientContainer(
       widgetKey: WidgetsKeys.aboutKey,
-      padding: EdgeInsets.symmetric(horizontal: Constants.kMobileHorizontalPadding),
+      padding: const EdgeInsets.symmetric(horizontal: Constants.kMobileHorizontalPadding),
       reverse: true,
       child: Column(
         children: [

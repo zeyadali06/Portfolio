@@ -15,7 +15,7 @@ void snackBar(
       behavior: SnackBarBehavior.floating,
       margin: const EdgeInsets.all(25),
       backgroundColor: backgroundColor,
-      duration: Duration(seconds: 1, milliseconds: 500),
+      duration: const Duration(seconds: 1, milliseconds: 500),
     ),
   );
 }

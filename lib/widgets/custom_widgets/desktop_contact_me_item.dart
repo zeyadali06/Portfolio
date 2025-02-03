@@ -21,7 +21,7 @@ class DesktopContactMeItem extends StatelessWidget {
         padding: EdgeInsets.zero,
         onPressed: model.onPressed,
         child: Padding(
-          padding: EdgeInsets.all(15),
+          padding: const EdgeInsets.all(15),
           child: Row(
             children: [
               Container(

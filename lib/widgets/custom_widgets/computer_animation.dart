@@ -13,7 +13,7 @@ class ComputerAnimation extends StatelessWidget {
       child: AvatarGlow(
         glowRadiusFactor: .20,
         glowColor: Colors.blueAccent,
-        duration: Duration(seconds: 2),
+        duration: const Duration(seconds: 2),
         repeat: true,
         animate: true,
         curve: Curves.easeInOutCubic,

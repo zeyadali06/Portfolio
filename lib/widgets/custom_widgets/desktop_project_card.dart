@@ -58,7 +58,7 @@ class DesktopProjectCard extends StatelessWidget {
                       children: [
                         AvatarGlow(
                           glowColor: Colors.grey,
-                          duration: Duration(seconds: 2),
+                          duration: const Duration(seconds: 2),
                           glowRadiusFactor: .15,
                           repeat: true,
                           animate: true,
@@ -66,14 +66,14 @@ class DesktopProjectCard extends StatelessWidget {
                           child: IconButton(
                             onPressed: () async => await launchUrl(Uri.parse(project.githubUrl)),
                             color: Colors.grey[850],
-                            icon: Icon(FontAwesomeIcons.github, color: Colors.white),
+                            icon: const Icon(FontAwesomeIcons.github, color: Colors.white),
                           ),
                         ),
                         const SizedBox(width: 10),
                         if (project.designUrl != null)
                           AvatarGlow(
                             glowColor: Colors.grey,
-                            duration: Duration(seconds: 2),
+                            duration: const Duration(seconds: 2),
                             glowRadiusFactor: .15,
                             repeat: true,
                             animate: true,
@@ -81,7 +81,7 @@ class DesktopProjectCard extends StatelessWidget {
                             child: IconButton(
                               onPressed: () async => await launchUrl(Uri.parse(project.designUrl!)),
                               color: Colors.grey[850],
-                              icon: Icon(FontAwesomeIcons.figma, color: Colors.white),
+                              icon: const Icon(FontAwesomeIcons.figma, color: Colors.white),
                             ),
                           ),
                       ],
