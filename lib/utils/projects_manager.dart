@@ -64,7 +64,7 @@ final class ProjectsManager {
         title: 'LinkAI App',
         description:
             "This project is a job-matching platform similar to LinkedIn or Wuzzuf, enhanced with an AI-powered voice interview feature. It helps employers assess communication skills through simulated interviews using speech analysis. The app is built with Flutter, and integrates custom AI models for voice-to-text, AI evaluation, and text-to-speech. It aims to improve hiring accuracy and candidate preparation.",
-        imagePath: Assets.projectsPrototypesMiniInstapayApp,
+        imagePath: Assets.projectsPrototypesLinkAIApp,
         tools: _getTool(
           [
             ToolType.flutter,
