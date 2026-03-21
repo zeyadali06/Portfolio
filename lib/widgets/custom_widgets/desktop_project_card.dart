@@ -15,7 +15,7 @@ class DesktopProjectCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomContainer(
-      color: const Color(0xff1e1e1e),
+      color: const Color(0xff141414),
       padding: 20,
       child: Column(
         children: [
@@ -29,8 +29,9 @@ class DesktopProjectCard extends StatelessWidget {
           Row(
             children: [
               Expanded(
-                child: AspectRatio(
-                  aspectRatio: 3 / 2,
+                child: ClipRRect(
+                  clipBehavior: Clip.hardEdge,
+                  borderRadius: BorderRadius.circular(10),
                   child: Image.asset(
                     project.imagePath,
                   ),
