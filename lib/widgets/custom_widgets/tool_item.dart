@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zeyad_ali_portfolio/models/tool_model.dart';
+import 'package:zeyad_ali_portfolio/utils/app_theme.dart';
 import 'package:zeyad_ali_portfolio/utils/responsive_font_size.dart';
 import 'package:zeyad_ali_portfolio/widgets/custom_widgets/custom_item_container.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -16,7 +17,10 @@ class ToolItem extends StatelessWidget {
       child: CustomContainer(
         child: Text(
           tool.text,
-          style: TextStyle(color: Colors.white, fontSize: getResponsiveFontSize(12, context)),
+          style: TextStyle(
+            color: AppTheme.primaryTextColor,
+            fontSize: getResponsiveFontSize(12, context),
+          ),
         ),
       ),
     );

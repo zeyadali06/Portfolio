@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:zeyad_ali_portfolio/models/my_skills_item_model.dart';
+import 'package:zeyad_ali_portfolio/utils/app_theme.dart';
 import 'package:zeyad_ali_portfolio/utils/responsive_font_size.dart';
 
 class TabletMySkillsItem extends StatelessWidget {
@@ -18,7 +19,7 @@ class TabletMySkillsItem extends StatelessWidget {
         padding: const EdgeInsets.all(20),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          color: Colors.grey.withValues(alpha: 0.2),
+          color: AppTheme.mySkillsButtonBackgroundColor,
         ),
         child: Column(
           children: [
@@ -30,7 +31,10 @@ class TabletMySkillsItem extends StatelessWidget {
             const SizedBox(height: 10),
             Text(
               model.title,
-              style: TextStyle(color: Colors.white, fontSize: getResponsiveFontSize(16, context)),
+              style: TextStyle(
+                color: AppTheme.primaryTextColor,
+                fontSize: getResponsiveFontSize(16, context),
+              ),
             ),
           ],
         ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zeyad_ali_portfolio/utils/app_theme.dart';
 import 'package:zeyad_ali_portfolio/utils/widgets_keys.dart';
 import 'package:zeyad_ali_portfolio/widgets/custom_widgets/custom_single_child_scroll_view.dart';
 import 'package:zeyad_ali_portfolio/widgets/tablet_sections/tablet_about_me_section.dart';
@@ -25,9 +26,12 @@ class TabletLayout extends StatelessWidget {
             onTap: () {
               WidgetsKeys.tabletLayoutKey.currentState?.openEndDrawer();
             },
-            child: const Padding(
-              padding: EdgeInsets.all(20),
-              child: Icon(Icons.menu, color: Colors.white),
+            child: Padding(
+              padding: const EdgeInsets.all(20),
+              child: Icon(
+                Icons.menu,
+                color: AppTheme.iconColor,
+              ),
             ),
           )
         ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zeyad_ali_portfolio/models/app_bar_button_model.dart';
+import 'package:zeyad_ali_portfolio/utils/app_theme.dart';
 import 'package:zeyad_ali_portfolio/utils/assets.dart';
 import 'package:zeyad_ali_portfolio/utils/constants.dart';
 import 'package:zeyad_ali_portfolio/utils/widgets_keys.dart';
@@ -86,7 +87,7 @@ class DesktopCustomAppBar extends StatelessWidget implements PreferredSizeWidget
             child: Container(
               padding: const EdgeInsets.symmetric(vertical: 5),
               decoration: BoxDecoration(
-                border: Border.all(color: const Color(0xff261852)),
+                border: Border.all(color: AppTheme.appBarBorderColor),
                 borderRadius: BorderRadius.circular(500),
               ),
               child: Row(

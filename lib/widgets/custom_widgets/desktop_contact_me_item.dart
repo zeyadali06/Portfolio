@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zeyad_ali_portfolio/models/contact_me_item_model.dart';
+import 'package:zeyad_ali_portfolio/utils/app_theme.dart';
 import 'package:zeyad_ali_portfolio/utils/responsive_font_size.dart';
 
 class DesktopContactMeItem extends StatelessWidget {
@@ -15,7 +16,7 @@ class DesktopContactMeItem extends StatelessWidget {
       decoration: BoxDecoration(
         shape: BoxShape.rectangle,
         borderRadius: BorderRadius.circular(8),
-        color: const Color(0xff111827),
+        color: AppTheme.cardColor,
       ),
       child: MaterialButton(
         padding: EdgeInsets.zero,
@@ -28,12 +29,18 @@ class DesktopContactMeItem extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
                 ),
-                child: Icon(model.icon, color: Colors.white),
+                child: Icon(
+                  model.icon,
+                  color: AppTheme.iconColor,
+                ),
               ),
               const SizedBox(width: 10),
               Text(
                 model.title,
-                style: TextStyle(color: Colors.white, fontSize: getResponsiveFontSize(14, context)),
+                style: TextStyle(
+                  color: AppTheme.primaryTextColor,
+                  fontSize: getResponsiveFontSize(14, context),
+                ),
               ),
             ],
           ),
