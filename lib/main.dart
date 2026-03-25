@@ -22,7 +22,8 @@ class MyApp extends StatelessWidget {
             theme: AppTheme.ligthMode,
             darkTheme: AppTheme.darkMode,
             themeMode: BlocProvider.of<AppThemeCubit>(context).appTheme,
-            home: const AdaptiveLayout(),
+            // ignore: prefer_const_constructors
+            home: AdaptiveLayout(),
           );
         },
       ),

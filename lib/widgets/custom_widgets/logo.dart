@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:zeyad_ali_portfolio/utils/app_theme.dart';
 
 class Logo extends StatefulWidget {
-  const Logo({super.key, required this.imagePath});
+  const Logo({super.key, required this.imagePath, this.color});
 
   final String imagePath;
+  final Color? color;
 
   @override
   State<Logo> createState() => _LogoState();
@@ -41,6 +43,8 @@ class _LogoState extends State<Logo> with SingleTickerProviderStateMixin {
       child: Image.asset(
         widget.imagePath,
         height: 50,
+        color: widget.color ?? AppTheme.logoColor,
+        colorBlendMode: BlendMode.srcIn,
       ),
     );
   }

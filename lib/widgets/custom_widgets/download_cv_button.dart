@@ -21,6 +21,7 @@ class DownloadCVButton extends StatelessWidget {
       child: Text(
         'Download CV',
         style: TextStyle(
+          fontFamily: AppTheme.fontFamily,
           color: AppTheme.primaryTextColor,
           fontWeight: FontWeight.bold,
           fontSize: getResponsiveFontSize(14, context),

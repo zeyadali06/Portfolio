@@ -4,11 +4,18 @@ import 'package:zeyad_ali_portfolio/utils/app_theme.dart';
 import 'package:zeyad_ali_portfolio/utils/responsive_font_size.dart';
 
 class CustomAppBarButton extends StatelessWidget {
-  const CustomAppBarButton({super.key, required this.model, this.fontSize = 14, this.highlighted = false});
+  const CustomAppBarButton({
+    super.key,
+    required this.model,
+    this.fontSize = 14,
+    this.highlighted = false,
+    this.textColor,
+  });
 
   final AppBarButtonModel model;
   final double fontSize;
   final bool highlighted;
+  final Color? textColor;
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +27,9 @@ class CustomAppBarButton extends StatelessWidget {
       ),
       child: highlighted
           ? ShaderMask(
-              shaderCallback: (bounds) => const LinearGradient(
-                colors: [Colors.blue, Colors.white, Colors.red],
+              blendMode: BlendMode.srcIn,
+              shaderCallback: (bounds) => LinearGradient(
+                colors: AppTheme.customAppBarActiveItemColors,
               ).createShader(bounds),
               child: Text(
                 model.text,
@@ -31,7 +39,8 @@ class CustomAppBarButton extends StatelessWidget {
           : Text(
               model.text,
               style: TextStyle(
-                color: AppTheme.primaryTextColor,
+                fontFamily: AppTheme.fontFamily,
+                color: textColor ?? AppTheme.customAppBarInactiveItemColor,
                 fontSize: getResponsiveFontSize(fontSize, context),
               ),
             ),

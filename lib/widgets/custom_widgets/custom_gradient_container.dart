@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zeyad_ali_portfolio/utils/app_theme.dart';
 
 class CustomGradientContainer extends StatelessWidget {
   const CustomGradientContainer({super.key, this.widgetKey, this.child, this.padding, this.reverse = false});
@@ -17,10 +18,7 @@ class CustomGradientContainer extends StatelessWidget {
         gradient: LinearGradient(
           begin: reverse ? Alignment.centerRight : Alignment.centerLeft,
           end: reverse ? Alignment.centerLeft : Alignment.centerRight,
-          colors: const [
-            Colors.black,
-            Color(0xff111827),
-          ],
+          colors: AppTheme.sectionContainerColors,
         ),
       ),
       child: child,

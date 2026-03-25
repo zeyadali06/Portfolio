@@ -12,7 +12,7 @@ class CustomContainer extends StatelessWidget {
   final Widget child;
   final double padding;
   final double radius;
-  final Color color;
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {

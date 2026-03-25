@@ -15,6 +15,7 @@ class ToolItem extends StatelessWidget {
     return GestureDetector(
       onTap: tool.url == null ? null : () async => await launchUrl(Uri.parse(tool.url!)),
       child: CustomContainer(
+        color: AppTheme.projectCardToolItemColor,
         child: Text(
           tool.text,
           style: TextStyle(

@@ -15,22 +15,28 @@ class DesktopAboutMeSection extends StatelessWidget {
       widgetKey: WidgetsKeys.aboutKey,
       reverse: true,
       padding: const EdgeInsets.symmetric(horizontal: Constants.kDesktopHorizontalPadding),
-      child: const Column(
+      // ignore: prefer_const_constructors
+      child: Column(
         children: [
-          SizedBox(height: Constants.kDesktopVerticalPadding),
+          const SizedBox(height: Constants.kDesktopVerticalPadding),
+          // ignore: prefer_const_constructors
           SectionHeader(headerText: 'About Me'),
-          SizedBox(height: Constants.kDesktopVerticalPadding),
+          const SizedBox(height: Constants.kDesktopVerticalPadding),
+          // ignore: prefer_const_constructors
           Row(
             children: [
+              // ignore: prefer_const_constructors
               Expanded(child: ComputerAnimation()),
-              SizedBox(width: 50),
+              const SizedBox(width: 50),
+              // ignore: prefer_const_constructors
               Expanded(
                 flex: 3,
+                // ignore: prefer_const_constructors
                 child: AboutMeText(),
               ),
             ],
           ),
-          SizedBox(height: Constants.kDesktopVerticalPadding),
+          const SizedBox(height: Constants.kDesktopVerticalPadding),
         ],
       ),
     );

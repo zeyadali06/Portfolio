@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:zeyad_ali_portfolio/utils/app_theme.dart';
 import 'package:zeyad_ali_portfolio/utils/widgets_keys.dart';
+import 'package:zeyad_ali_portfolio/widgets/custom_drawer.dart';
 import 'package:zeyad_ali_portfolio/widgets/custom_widgets/custom_single_child_scroll_view.dart';
 import 'package:zeyad_ali_portfolio/widgets/desktop_custom_app_bar.dart';
 import 'package:zeyad_ali_portfolio/widgets/desktop_sections/desktop_about_me_section.dart';
@@ -82,17 +84,26 @@ class _DesktopLayoutState extends State<DesktopLayout> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: WidgetsKeys.desktopLayoutKey,
+      endDrawer: CustomDrawer(scaffoldKey: WidgetsKeys.desktopLayoutKey),
       backgroundColor: Colors.black,
       extendBodyBehindAppBar: true,
       appBar: _showAppBar ? DesktopCustomAppBar(highlightedButtonIndex: _index) : null,
       body: CustomSingleChildScrollView(
+        thumbColor: AppTheme.thumbColor,
         scrollController: _scrollController,
-        child: const Column(
+        // ignore: prefer_const_constructors
+        child: Column(
           children: [
+            // ignore: prefer_const_constructors
             DesktopIdentificationSection(),
+            // ignore: prefer_const_constructors
             DesktopAboutMeSection(),
+            // ignore: prefer_const_constructors
             DesktopMySkillsSection(),
+            // ignore: prefer_const_constructors
             DesktopProjectsSection(),
+            // ignore: prefer_const_constructors
             DesktopContactMeSection(),
           ],
         ),

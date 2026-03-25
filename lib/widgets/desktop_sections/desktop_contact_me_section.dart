@@ -21,7 +21,8 @@ class DesktopContactMeSection extends StatelessWidget {
       child: Column(
         children: [
           const SizedBox(height: Constants.kDesktopVerticalPadding),
-          const SectionHeader(headerText: 'Contact Me'),
+          // ignore: prefer_const_constructors
+          SectionHeader(headerText: 'Contact Me'),
           const SizedBox(height: Constants.kDesktopVerticalPadding),
           Wrap(
             spacing: 15,
@@ -35,7 +36,8 @@ class DesktopContactMeSection extends StatelessWidget {
             ),
           ),
           const SizedBox(height: Constants.kDesktopVerticalPadding),
-          const ConclusionText(),
+          // ignore: prefer_const_constructors
+          ConclusionText(),
           const SizedBox(height: Constants.kDesktopVerticalPadding),
           const Row(),
         ],

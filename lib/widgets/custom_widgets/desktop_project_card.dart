@@ -21,6 +21,7 @@ class DesktopProjectCard extends StatelessWidget {
       child: Column(
         children: [
           CustomContainer(
+            color: AppTheme.projectCardTitleColor,
             child: Text(
               project.title,
               style: TextStyle(
@@ -46,11 +47,13 @@ class DesktopProjectCard extends StatelessWidget {
               Expanded(
                 child: Column(
                   children: [
-                    Text(project.description,
-                        style: TextStyle(
-                          fontSize: getResponsiveFontSize(14, context),
-                          color: AppTheme.bodyTextColor,
-                        )),
+                    Text(
+                      project.description,
+                      style: TextStyle(
+                        fontSize: getResponsiveFontSize(14, context),
+                        color: AppTheme.bodyTextColor,
+                      ),
+                    ),
                     const SizedBox(height: 15),
                     Wrap(
                       alignment: WrapAlignment.start,
@@ -64,7 +67,7 @@ class DesktopProjectCard extends StatelessWidget {
                     Row(
                       children: [
                         AvatarGlow(
-                          glowColor: Colors.grey,
+                          glowColor: AppTheme.projectCardIconAvatrGlowColor,
                           duration: const Duration(seconds: 2),
                           glowRadiusFactor: .15,
                           repeat: true,
@@ -82,7 +85,7 @@ class DesktopProjectCard extends StatelessWidget {
                         const SizedBox(width: 10),
                         if (project.designUrl != null)
                           AvatarGlow(
-                            glowColor: Colors.grey,
+                            glowColor: AppTheme.projectCardIconAvatrGlowColor,
                             duration: const Duration(seconds: 2),
                             glowRadiusFactor: .15,
                             repeat: true,

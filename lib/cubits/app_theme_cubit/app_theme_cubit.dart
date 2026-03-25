@@ -9,15 +9,15 @@ class AppThemeCubit extends Cubit<AppThemeState> {
 
   ThemeMode appTheme = ThemeMode.dark;
 
-  Future<void> changeTheme() async {
+  Future<void> changeTheme(bool dark) async {
     emit(AppThemeInitial());
 
-    if (appTheme == ThemeMode.dark) {
-      appTheme = ThemeMode.light;
-      AppTheme.isDark = false;
-    } else if (appTheme == ThemeMode.light) {
+    if (dark) {
       appTheme = ThemeMode.dark;
       AppTheme.isDark = true;
+    } else {
+      appTheme = ThemeMode.light;
+      AppTheme.isDark = false;
     }
 
     emit(AppThemeUpdateTheme());

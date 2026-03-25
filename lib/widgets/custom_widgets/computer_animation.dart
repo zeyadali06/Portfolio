@@ -1,6 +1,7 @@
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:zeyad_ali_portfolio/utils/app_theme.dart';
 import 'package:zeyad_ali_portfolio/utils/assets.dart';
 
 class ComputerAnimation extends StatelessWidget {
@@ -12,7 +13,7 @@ class ComputerAnimation extends StatelessWidget {
       aspectRatio: 1,
       child: AvatarGlow(
         glowRadiusFactor: .20,
-        glowColor: Colors.blueAccent,
+        glowColor: AppTheme.computerAnimationColor,
         duration: const Duration(seconds: 2),
         repeat: true,
         animate: true,
