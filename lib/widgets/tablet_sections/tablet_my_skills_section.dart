@@ -20,7 +20,8 @@ class TabletMySkillsSection extends StatelessWidget {
       child: Column(
         children: [
           const SizedBox(height: Constants.kDesktopVerticalPadding),
-          const SectionHeader(headerText: 'My Skills'),
+          // ignore: prefer_const_constructors
+          SectionHeader(headerText: 'My Skills'),
           const SizedBox(height: Constants.kDesktopVerticalPadding),
           Wrap(
             spacing: 15,

@@ -21,6 +21,7 @@ class MobileProjectCard extends StatelessWidget {
       child: Column(
         children: [
           CustomContainer(
+            color: AppTheme.projectCardTitleColor,
             child: Text(
               project.title,
               style: TextStyle(
@@ -59,7 +60,7 @@ class MobileProjectCard extends StatelessWidget {
           Row(
             children: [
               AvatarGlow(
-                glowColor: Colors.grey,
+                glowColor: AppTheme.projectCardIconAvatrGlowColor,
                 duration: const Duration(seconds: 2),
                 glowRadiusFactor: .15,
                 repeat: true,
@@ -77,7 +78,7 @@ class MobileProjectCard extends StatelessWidget {
               const SizedBox(width: 10),
               if (project.designUrl != null)
                 AvatarGlow(
-                  glowColor: Colors.grey,
+                  glowColor: AppTheme.projectCardIconAvatrGlowColor,
                   duration: const Duration(seconds: 2),
                   glowRadiusFactor: .15,
                   repeat: true,

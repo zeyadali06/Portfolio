@@ -20,7 +20,8 @@ class MobileIdentificationSection extends StatelessWidget {
             child: const ProfileImage(),
           ),
           const SizedBox(height: 20),
-          const IdentificationIntroText(),
+          // ignore: prefer_const_constructors
+          IdentificationIntroText(),
           const SizedBox(height: Constants.kMobileVerticalPadding),
         ],
       ),

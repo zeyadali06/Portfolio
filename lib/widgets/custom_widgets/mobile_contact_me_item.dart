@@ -13,6 +13,7 @@ class MobileContactMeItem extends StatelessWidget {
     return GestureDetector(
       onTap: model.onPressed,
       child: CustomContainer(
+        color: AppTheme.projectCardToolItemColor,
         child: Icon(
           model.icon,
           color: AppTheme.iconColor,

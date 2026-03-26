@@ -36,13 +36,20 @@ class MobileLayout extends StatelessWidget {
           )
         ],
       ),
-      body: const CustomSingleChildScrollView(
+      // ignore: prefer_const_constructors
+      body: CustomSingleChildScrollView(
+        // ignore: prefer_const_constructors
         child: Column(
           children: [
+            // ignore: prefer_const_constructors
             MobileIdentificationSection(),
+            // ignore: prefer_const_constructors
             MobileAboutMeSection(),
+            // ignore: prefer_const_constructors
             MobileMySkillsSection(),
+            // ignore: prefer_const_constructors
             MobileProjectSection(),
+            // ignore: prefer_const_constructors
             MobileContactMeSection(),
           ],
         ),

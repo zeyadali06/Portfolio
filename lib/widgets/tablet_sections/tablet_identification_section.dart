@@ -18,10 +18,12 @@ class TabletIdentificationSection extends StatelessWidget {
           SizedBox(
             width: MediaQuery.sizeOf(context).width * .30,
             height: MediaQuery.sizeOf(context).width * .30,
-            child: const ProfileImage(),
+            // ignore: prefer_const_constructors
+            child: ProfileImage(),
           ),
           const SizedBox(height: 20),
-          const IdentificationIntroText(),
+          // ignore: prefer_const_constructors
+          IdentificationIntroText(),
           const SizedBox(height: Constants.kTabletVerticalPadding),
         ],
       ),

@@ -18,14 +18,17 @@ class MobileAboutMeSection extends StatelessWidget {
       child: Column(
         children: [
           const SizedBox(height: Constants.kMobileVerticalPadding),
-          const SectionHeader(headerText: 'About Me'),
+          // ignore: prefer_const_constructors
+          SectionHeader(headerText: 'About Me'),
           const SizedBox(height: Constants.kMobileVerticalPadding),
           SizedBox(
             width: MediaQuery.sizeOf(context).width * .30,
-            child: const ComputerAnimation(),
+            // ignore: prefer_const_constructors
+            child: ComputerAnimation(),
           ),
           const SizedBox(height: Constants.kMobileVerticalPadding),
-          const AboutMeText(),
+          // ignore: prefer_const_constructors
+          AboutMeText(),
           const SizedBox(height: Constants.kMobileVerticalPadding),
         ],
       ),

@@ -36,13 +36,20 @@ class TabletLayout extends StatelessWidget {
           )
         ],
       ),
-      body: const CustomSingleChildScrollView(
+      // ignore: prefer_const_constructors
+      body: CustomSingleChildScrollView(
+        // ignore: prefer_const_constructors
         child: Column(
           children: [
+            // ignore: prefer_const_constructors
             TabletIdentificationSection(),
+            // ignore: prefer_const_constructors
             TabletAboutMeSection(),
+            // ignore: prefer_const_constructors
             TabletMySkillsSection(),
+            // ignore: prefer_const_constructors
             TabletProjectSection(),
+            // ignore: prefer_const_constructors
             TabletContactMeSection(),
           ],
         ),

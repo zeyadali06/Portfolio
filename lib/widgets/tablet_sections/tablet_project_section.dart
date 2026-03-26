@@ -20,7 +20,8 @@ class TabletProjectSection extends StatelessWidget {
       child: Column(
         children: [
           const SizedBox(height: Constants.kTabletVerticalPadding),
-          const SectionHeader(headerText: 'My Projects'),
+          // ignore: prefer_const_constructors
+          SectionHeader(headerText: 'My Projects'),
           const SizedBox(height: Constants.kTabletVerticalPadding),
           OverflowBar(
             overflowSpacing: 15,
