@@ -9,4 +9,5 @@ final class WidgetsKeys {
   static final GlobalKey<State<StatefulWidget>> desktopAppBarKey = GlobalKey<State<StatefulWidget>>();
   static final GlobalKey<ScaffoldState> tabletLayoutKey = GlobalKey<ScaffoldState>();
   static final GlobalKey<ScaffoldState> mobileLayoutKey = GlobalKey<ScaffoldState>();
+  static final GlobalKey<ScaffoldState> desktopLayoutKey = GlobalKey<ScaffoldState>();
 }

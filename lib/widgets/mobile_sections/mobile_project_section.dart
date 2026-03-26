@@ -20,7 +20,8 @@ class MobileProjectSection extends StatelessWidget {
       child: Column(
         children: [
           const SizedBox(height: Constants.kMobileVerticalPadding),
-          const SectionHeader(headerText: 'My Projects'),
+          // ignore: prefer_const_constructors
+          SectionHeader(headerText: 'My Projects'),
           const SizedBox(height: Constants.kMobileVerticalPadding),
           OverflowBar(
             overflowSpacing: 15,

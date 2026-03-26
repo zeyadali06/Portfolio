@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zeyad_ali_portfolio/models/app_bar_button_model.dart';
+import 'package:zeyad_ali_portfolio/utils/app_theme.dart';
 import 'package:zeyad_ali_portfolio/utils/assets.dart';
 import 'package:zeyad_ali_portfolio/utils/constants.dart';
 import 'package:zeyad_ali_portfolio/utils/widgets_keys.dart';
@@ -71,58 +72,88 @@ class DesktopCustomAppBar extends StatelessWidget implements PreferredSizeWidget
 
     return Container(
       key: WidgetsKeys.desktopAppBarKey,
-      color: Colors.transparent.withValues(alpha: 0.9),
+      color: AppTheme.customAppBarColor,
       padding: const EdgeInsets.only(
-        left: Constants.kDesktopHorizontalPadding,
-        right: Constants.kDesktopHorizontalPadding,
         top: 20,
         bottom: 20,
       ),
-      child: Row(
+      child: Stack(
         children: [
-          const Logo(imagePath: Assets.imagesAndroidLogo),
-          const SizedBox(width: 40),
-          Expanded(
-            child: Container(
-              padding: const EdgeInsets.symmetric(vertical: 5),
-              decoration: BoxDecoration(
-                border: Border.all(color: const Color(0xff261852)),
-                borderRadius: BorderRadius.circular(500),
+          Row(
+            children: [
+              const SizedBox(width: Constants.kDesktopHorizontalPadding),
+              // ignore: prefer_const_constructors
+              Logo(
+                imagePath: Assets.imagesAndroidLogo,
+                color: AppTheme.logoColor,
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20),
-                    child: Row(
-                      children: List.generate(
-                        buttons.length,
-                        (int index) {
-                          return Row(
-                            children: [
-                              CustomAppBarButton(model: buttons[index], highlighted: index == highlightedButtonIndex),
-                              index >= 0 && index < buttons.length - 1 ? const SizedBox(width: 15) : const SizedBox(),
-                            ],
-                          );
-                        },
-                      ),
-                    ),
+              const SizedBox(width: 40),
+              Expanded(
+                child: Container(
+                  padding: const EdgeInsets.symmetric(vertical: 5),
+                  decoration: BoxDecoration(
+                    border: Border.all(color: AppTheme.appBarBorderColor),
+                    borderRadius: BorderRadius.circular(500),
                   ),
-                  const Flexible(
-                    child: FittedBox(
-                      fit: BoxFit.scaleDown,
-                      child: Padding(
-                        padding: EdgeInsets.only(right: 5),
-                        child: DownloadCVButton(),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 20),
+                        child: Row(
+                          children: List.generate(
+                            buttons.length,
+                            (int index) {
+                              return Row(
+                                children: [
+                                  CustomAppBarButton(model: buttons[index], highlighted: index == highlightedButtonIndex),
+                                  index >= 0 && index < buttons.length - 1 ? const SizedBox(width: 15) : const SizedBox(),
+                                ],
+                              );
+                            },
+                          ),
+                        ),
                       ),
-                    ),
+                      // ignore: prefer_const_constructors
+                      Flexible(
+                        // ignore: prefer_const_constructors
+                        child: FittedBox(
+                          fit: BoxFit.scaleDown,
+                          // ignore: prefer_const_constructors
+                          child: Padding(
+                            padding: const EdgeInsets.only(right: 5),
+                            // ignore: prefer_const_constructors
+                            child: DownloadCVButton(),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
-                ],
+                ),
+              ),
+              const SizedBox(width: 20),
+              // ignore: prefer_const_constructors
+              Logo(
+                imagePath: Assets.imagesAppleLogo,
+                color: AppTheme.logoColor,
+              ),
+              const SizedBox(width: Constants.kDesktopHorizontalPadding),
+            ],
+          ),
+          Positioned(
+            top: 0,
+            right: Constants.kDesktopHorizontalPadding / 2,
+            bottom: 0,
+            child: IconButton(
+              onPressed: () {
+                WidgetsKeys.desktopLayoutKey.currentState?.openEndDrawer();
+              },
+              icon: Icon(
+                Icons.menu,
+                color: AppTheme.menuButtonColor,
               ),
             ),
           ),
-          const SizedBox(width: 20),
-          const Logo(imagePath: Assets.imagesAppleLogo),
         ],
       ),
     );

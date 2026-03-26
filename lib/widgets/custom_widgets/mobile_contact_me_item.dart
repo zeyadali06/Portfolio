@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zeyad_ali_portfolio/models/contact_me_item_model.dart';
+import 'package:zeyad_ali_portfolio/utils/app_theme.dart';
 import 'package:zeyad_ali_portfolio/widgets/custom_widgets/custom_item_container.dart';
 
 class MobileContactMeItem extends StatelessWidget {
@@ -12,9 +13,10 @@ class MobileContactMeItem extends StatelessWidget {
     return GestureDetector(
       onTap: model.onPressed,
       child: CustomContainer(
+        color: AppTheme.projectCardToolItemColor,
         child: Icon(
           model.icon,
-          color: Colors.white,
+          color: AppTheme.iconColor,
         ),
       ),
     );

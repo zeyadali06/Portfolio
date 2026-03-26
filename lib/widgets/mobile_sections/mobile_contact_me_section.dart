@@ -21,7 +21,8 @@ class MobileContactMeSection extends StatelessWidget {
       child: Column(
         children: [
           const SizedBox(height: Constants.kMobileVerticalPadding),
-          const SectionHeader(headerText: 'Contact Me'),
+          // ignore: prefer_const_constructors
+          SectionHeader(headerText: 'Contact Me'),
           const SizedBox(height: Constants.kMobileVerticalPadding),
           Wrap(
             spacing: 15,
@@ -35,7 +36,8 @@ class MobileContactMeSection extends StatelessWidget {
             ),
           ),
           const SizedBox(height: Constants.kMobileVerticalPadding),
-          const ConclusionText(),
+          // ignore: prefer_const_constructors
+          ConclusionText(),
           const SizedBox(height: Constants.kMobileVerticalPadding),
           const Row(),
         ],

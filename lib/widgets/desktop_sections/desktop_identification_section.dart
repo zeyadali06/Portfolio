@@ -13,23 +13,29 @@ class DesktopIdentificationSection extends StatelessWidget {
     return CustomGradientContainer(
       widgetKey: WidgetsKeys.homeKey,
       padding: const EdgeInsets.symmetric(horizontal: Constants.kDesktopHorizontalPadding),
-      child: const Column(
+      // ignore: prefer_const_constructors
+      child: Column(
         children: [
-          SizedBox(height: 90),
-          SizedBox(height: Constants.kDesktopVerticalPadding),
+          const SizedBox(height: 90),
+          const SizedBox(height: Constants.kDesktopVerticalPadding),
+          // ignore: prefer_const_constructors
           Row(
             children: [
+              // ignore: prefer_const_constructors
               Expanded(
                 flex: 3,
+                // ignore: prefer_const_constructors
                 child: IdentificationIntroText(),
               ),
-              SizedBox(width: 50),
+              const SizedBox(width: 50),
+              // ignore: prefer_const_constructors
               Expanded(
+                // ignore: prefer_const_constructors
                 child: ProfileImage(),
               ),
             ],
           ),
-          SizedBox(height: Constants.kDesktopVerticalPadding),
+          const SizedBox(height: Constants.kDesktopVerticalPadding),
         ],
       ),
     );
