@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zeyad_ali_portfolio/localization/localization_extenstion.dart';
 import 'package:zeyad_ali_portfolio/models/contact_me_item_model.dart';
 import 'package:zeyad_ali_portfolio/utils/constants.dart';
 import 'package:zeyad_ali_portfolio/utils/contact_me_manager.dart';
@@ -22,7 +23,7 @@ class MobileContactMeSection extends StatelessWidget {
         children: [
           const SizedBox(height: Constants.kMobileVerticalPadding),
           // ignore: prefer_const_constructors
-          SectionHeader(headerText: 'Contact Me'),
+          SectionHeader(headerText: context.tr.contact_me),
           const SizedBox(height: Constants.kMobileVerticalPadding),
           Wrap(
             spacing: 15,

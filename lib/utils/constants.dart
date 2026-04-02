@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 final class Constants {
   static const String cvLink = "https://drive.google.com/file/d/1Qfuqfv62nRu_JomYbyhHt72DuklVerGD/view?usp=sharing";
   static const double kDesktopHorizontalPadding = 80;
@@ -6,4 +8,6 @@ final class Constants {
   static const double kTabletVerticalPadding = 30;
   static const double kMobileHorizontalPadding = 20;
   static const double kMobileVerticalPadding = 30;
+  static const Locale english = Locale("en");
+  static const Locale arabic = Locale("ar");
 }

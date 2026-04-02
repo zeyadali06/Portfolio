@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:zeyad_ali_portfolio/cubits/app_localization_cubit/app_localization_cubit.dart';
+import 'package:zeyad_ali_portfolio/localization/localization_extenstion.dart';
 import 'package:zeyad_ali_portfolio/models/app_bar_button_model.dart';
 import 'package:zeyad_ali_portfolio/utils/app_theme.dart';
 import 'package:zeyad_ali_portfolio/utils/assets.dart';
 import 'package:zeyad_ali_portfolio/utils/constants.dart';
+import 'package:zeyad_ali_portfolio/utils/open_drawer.dart';
 import 'package:zeyad_ali_portfolio/utils/widgets_keys.dart';
 import 'package:zeyad_ali_portfolio/widgets/custom_widgets/custom_app_bar_button.dart';
 import 'package:zeyad_ali_portfolio/widgets/custom_widgets/download_cv_button.dart';
@@ -21,7 +25,7 @@ class DesktopCustomAppBar extends StatelessWidget implements PreferredSizeWidget
 
     final List<AppBarButtonModel> buttons = [
       AppBarButtonModel(
-        text: 'Home',
+        text: context.tr.home,
         onPressed: () async {
           await Scrollable.ensureVisible(
             WidgetsKeys.homeKey.currentContext!,
@@ -30,7 +34,7 @@ class DesktopCustomAppBar extends StatelessWidget implements PreferredSizeWidget
         },
       ),
       AppBarButtonModel(
-        text: 'About Me',
+        text: context.tr.about_me,
         onPressed: () async {
           await Scrollable.of(WidgetsKeys.aboutKey.currentContext!).position.animateTo(
                 homeSectionHeight - WidgetsKeys.desktopAppBarKey.currentContext!.size!.height,
@@ -40,7 +44,7 @@ class DesktopCustomAppBar extends StatelessWidget implements PreferredSizeWidget
         },
       ),
       AppBarButtonModel(
-        text: 'My Skills',
+        text: context.tr.my_skills,
         onPressed: () async {
           await Scrollable.of(WidgetsKeys.mySkillsKey.currentContext!).position.animateTo(
                 homeSectionHeight + aboutMeSectionHeight - WidgetsKeys.desktopAppBarKey.currentContext!.size!.height,
@@ -50,7 +54,7 @@ class DesktopCustomAppBar extends StatelessWidget implements PreferredSizeWidget
         },
       ),
       AppBarButtonModel(
-        text: 'Projects',
+        text: context.tr.projects,
         onPressed: () async {
           await Scrollable.of(WidgetsKeys.projectsKey.currentContext!).position.animateTo(
                 homeSectionHeight + aboutMeSectionHeight + mySkillsSectionHeight - WidgetsKeys.desktopAppBarKey.currentContext!.size!.height,
@@ -60,7 +64,7 @@ class DesktopCustomAppBar extends StatelessWidget implements PreferredSizeWidget
         },
       ),
       AppBarButtonModel(
-        text: 'Contact Me',
+        text: context.tr.contact_me,
         onPressed: () async {
           await Scrollable.ensureVisible(
             WidgetsKeys.contactMeKey.currentContext!,
@@ -106,8 +110,9 @@ class DesktopCustomAppBar extends StatelessWidget implements PreferredSizeWidget
                             (int index) {
                               return Row(
                                 children: [
+                                  if (index == 0 && BlocProvider.of<AppLocalizationCubit>(context).appLocale.languageCode == Constants.arabic.languageCode) const SizedBox(width: 15),
                                   CustomAppBarButton(model: buttons[index], highlighted: index == highlightedButtonIndex),
-                                  index >= 0 && index < buttons.length - 1 ? const SizedBox(width: 15) : const SizedBox(),
+                                  if (index >= 0 && index < buttons.length - 1) const SizedBox(width: 15),
                                 ],
                               );
                             },
@@ -121,7 +126,7 @@ class DesktopCustomAppBar extends StatelessWidget implements PreferredSizeWidget
                           fit: BoxFit.scaleDown,
                           // ignore: prefer_const_constructors
                           child: Padding(
-                            padding: const EdgeInsets.only(right: 5),
+                            padding: const EdgeInsets.only(right: 5, left: 5),
                             // ignore: prefer_const_constructors
                             child: DownloadCVButton(),
                           ),
@@ -146,7 +151,7 @@ class DesktopCustomAppBar extends StatelessWidget implements PreferredSizeWidget
             bottom: 0,
             child: IconButton(
               onPressed: () {
-                WidgetsKeys.desktopLayoutKey.currentState?.openEndDrawer();
+                openDrawer(context, WidgetsKeys.desktopLayoutKey);
               },
               icon: Icon(
                 Icons.menu,

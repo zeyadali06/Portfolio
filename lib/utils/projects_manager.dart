@@ -1,5 +1,7 @@
 // ignore_for_file: constant_identifier_names
 
+import 'package:flutter/material.dart';
+import 'package:zeyad_ali_portfolio/localization/localization_extenstion.dart';
 import 'package:zeyad_ali_portfolio/models/project_model.dart';
 import 'package:zeyad_ali_portfolio/models/tool_model.dart';
 import 'package:zeyad_ali_portfolio/utils/assets.dart';
@@ -54,16 +56,15 @@ final class ProjectsManager {
     ToolType.pinCodeFields: const ToolModel(text: 'Pin_Code_Fields', url: 'https://pub.dev/packages/pin_code_fields'),
     ToolType.urlLauncher: const ToolModel(text: 'URL_Launcher', url: 'https://pub.dev/packages/url_launcher'),
     ToolType.cleanArchitecture: const ToolModel(text: 'Clean Architecture'),
-    ToolType.mvvm: const ToolModel(text: 'MVVVM'),
+    ToolType.mvvm: const ToolModel(text: 'MVVM'),
     ToolType.mvc: const ToolModel(text: 'MVC'),
   };
 
-  static List<ProjectModel> getProjects() {
+  static List<ProjectModel> getProjects(BuildContext context) {
     return [
       ProjectModel(
-        title: 'LinkAI App',
-        description:
-            "This project is a job-matching platform similar to LinkedIn or Wuzzuf, enhanced with an AI-powered voice interview feature. It helps employers assess communication skills through simulated interviews using speech analysis. The app is built with Flutter, and integrates custom AI models for voice-to-text, AI evaluation, and text-to-speech. It aims to improve hiring accuracy and candidate preparation.",
+        title: context.tr.linkai_app_name,
+        description: context.tr.linkai_app_description,
         imagePath: Assets.projectsPrototypesLinkAIApp,
         tools: _getTool(
           [
@@ -90,9 +91,8 @@ final class ProjectsManager {
         githubUrl: 'https://github.com/zeyadali06/LinkAI',
       ),
       ProjectModel(
-        title: 'Mini Instapay App',
-        description:
-            "The Mini InstaPay App is a Flutter-based financial app for seamless money transfers, account management, usage reports, and real-time notifications.\nIn this project, my role was implementing real-time notifications using Socket.io and generating financial reports to help users track their transactions effectively.",
+        title: context.tr.mini_instapay_app_name,
+        description: context.tr.mini_instapay_app_description,
         imagePath: Assets.projectsPrototypesMiniInstapayApp,
         tools: _getTool(
           [
@@ -110,9 +110,8 @@ final class ProjectsManager {
         githubUrl: 'https://github.com/mostafamagde/mini_InstaPay',
       ),
       ProjectModel(
-        title: "Meal Recommendation App",
-        description:
-            "The Meal Recommendation App is a Flutter-based app that suggests meals based on user preferences. It uses Firebase for authentication and the Gemini AI model for recommendations. Users receive personalized meal suggestions along with ingredient lists.\nIn this project, my role included developing the splash screen, profile screen, meal details screen, and implementing the favorite icon functionality to allow users to save their preferred meals.",
+        title: context.tr.meal_recommendation_app_name,
+        description: context.tr.meal_recommendation_app_description,
         imagePath: Assets.projectsPrototypesMealRecommendationApp,
         tools: _getTool(
           [
@@ -133,9 +132,8 @@ final class ProjectsManager {
         designUrl: "https://www.figma.com/design/zDyccAigoAviKiU5EsczkX/Recipes?node-id=0-1&p=f&t=D2Y6algmowYU78OL-0",
       ),
       ProjectModel(
-        title: 'Tennis App',
-        description:
-            "The Tennis Player Training Prediction App helps players plan training sessions using weather forecasts. Built with Flutter, it supports location management, authentication, and a clean MVVM architecture. It integrates a machine learning model to predict optimal training times based on weather data.",
+        title: context.tr.tennis_app_name,
+        description: context.tr.tennis_app_description,
         imagePath: Assets.projectsPrototypesTennisApp,
         tools: _getTool(
           [
@@ -152,9 +150,8 @@ final class ProjectsManager {
         githubUrl: 'https://github.com/zeyadali06/TennisApp',
       ),
       ProjectModel(
-        title: "Fashion App",
-        description:
-            "The Fashion App, built with Flutter, offers a seamless shopping experience for clothing items. It features user authentication, profile management, and organized categories for easy browsing. Users can view product details, manage their cart, and track orders effortlessly.",
+        title: context.tr.fashion_app_name,
+        description: context.tr.fashion_app_description,
         imagePath: Assets.projectsPrototypesFashionApp,
         tools: _getTool(
           [
@@ -172,9 +169,8 @@ final class ProjectsManager {
         designUrl: "https://www.figma.com/design/eIEoyAf3TliYntkTH2gxYE/E-Commerce-App-Design-(Community)?node-id=0-1&node-type=canvas&t=jmSkhSwHQerBkkc5-0",
       ),
       ProjectModel(
-        title: 'ToDo App',
-        description:
-            "The To-Do List App is a Flutter-based application designed to help users manage their daily tasks efficiently. It offers a user-friendly interface where tasks can be added, marked as completed, or deleted. Users can categorize tasks into custom lists and set priorities, making it easier to focus on what matters most.",
+        title: context.tr.todo_app_name,
+        description: context.tr.todo_app_description,
         imagePath: Assets.projectsPrototypesToDoApp,
         tools: _getTool(
           [
