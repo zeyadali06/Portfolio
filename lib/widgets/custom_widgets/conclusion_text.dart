@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zeyad_ali_portfolio/localization/localization_extenstion.dart';
 import 'package:zeyad_ali_portfolio/utils/app_theme.dart';
 import 'package:zeyad_ali_portfolio/utils/responsive_font_size.dart';
 
@@ -8,7 +9,7 @@ class ConclusionText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      'Thank you for visiting my portfolio!',
+      context.tr.conclusion,
       textAlign: TextAlign.center,
       style: TextStyle(
         color: AppTheme.primaryTextColor,

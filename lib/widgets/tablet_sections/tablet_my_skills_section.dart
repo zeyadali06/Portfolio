@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zeyad_ali_portfolio/localization/localization_extenstion.dart';
 import 'package:zeyad_ali_portfolio/models/my_skills_item_model.dart';
 import 'package:zeyad_ali_portfolio/utils/constants.dart';
 import 'package:zeyad_ali_portfolio/utils/my_skills_manager.dart';
@@ -21,7 +22,7 @@ class TabletMySkillsSection extends StatelessWidget {
         children: [
           const SizedBox(height: Constants.kDesktopVerticalPadding),
           // ignore: prefer_const_constructors
-          SectionHeader(headerText: 'My Skills'),
+          SectionHeader(headerText: context.tr.my_skills),
           const SizedBox(height: Constants.kDesktopVerticalPadding),
           Wrap(
             spacing: 15,

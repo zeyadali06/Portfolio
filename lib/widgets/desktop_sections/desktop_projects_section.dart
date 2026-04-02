@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zeyad_ali_portfolio/localization/localization_extenstion.dart';
 import 'package:zeyad_ali_portfolio/models/project_model.dart';
 import 'package:zeyad_ali_portfolio/utils/constants.dart';
 import 'package:zeyad_ali_portfolio/utils/projects_manager.dart';
@@ -12,7 +13,7 @@ class DesktopProjectsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<ProjectModel> projects = ProjectsManager.getProjects();
+    final List<ProjectModel> projects = ProjectsManager.getProjects(context);
     return CustomGradientContainer(
       widgetKey: WidgetsKeys.projectsKey,
       reverse: true,
@@ -21,7 +22,7 @@ class DesktopProjectsSection extends StatelessWidget {
         children: [
           const SizedBox(height: Constants.kDesktopVerticalPadding),
           // ignore: prefer_const_constructors
-          SectionHeader(headerText: 'My Projects'),
+          SectionHeader(headerText: context.tr.projects),
           const SizedBox(height: Constants.kDesktopVerticalPadding),
           OverflowBar(
             overflowSpacing: 15,

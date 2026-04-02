@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zeyad_ali_portfolio/localization/localization_extenstion.dart';
 import 'package:zeyad_ali_portfolio/utils/app_theme.dart';
 import 'package:zeyad_ali_portfolio/utils/constants.dart';
 import 'package:zeyad_ali_portfolio/utils/responsive_font_size.dart';
@@ -19,7 +20,7 @@ class DownloadCVButton extends StatelessWidget {
         await launchUrl(Uri.parse(Constants.cvLink));
       },
       child: Text(
-        'Download CV',
+        context.tr.download_cv,
         style: TextStyle(
           fontFamily: AppTheme.fontFamily,
           color: AppTheme.primaryTextColor,

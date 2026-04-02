@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:zeyad_ali_portfolio/cubits/app_localization_cubit/app_localization_cubit.dart';
 import 'package:zeyad_ali_portfolio/utils/app_theme.dart';
+import 'package:zeyad_ali_portfolio/utils/constants.dart';
 import 'package:zeyad_ali_portfolio/utils/widgets_keys.dart';
 import 'package:zeyad_ali_portfolio/widgets/custom_drawer.dart';
 import 'package:zeyad_ali_portfolio/widgets/custom_widgets/custom_single_child_scroll_view.dart';
@@ -85,7 +88,8 @@ class _DesktopLayoutState extends State<DesktopLayout> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: WidgetsKeys.desktopLayoutKey,
-      endDrawer: CustomDrawer(scaffoldKey: WidgetsKeys.desktopLayoutKey),
+      endDrawer: BlocProvider.of<AppLocalizationCubit>(context).appLocale.languageCode == Constants.english.languageCode ? CustomDrawer(scaffoldKey: WidgetsKeys.desktopLayoutKey) : null,
+      drawer: BlocProvider.of<AppLocalizationCubit>(context).appLocale.languageCode == Constants.arabic.languageCode ? CustomDrawer(scaffoldKey: WidgetsKeys.desktopLayoutKey) : null,
       backgroundColor: Colors.black,
       extendBodyBehindAppBar: true,
       appBar: _showAppBar ? DesktopCustomAppBar(highlightedButtonIndex: _index) : null,

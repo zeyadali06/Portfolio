@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zeyad_ali_portfolio/localization/localization_extenstion.dart';
 import 'package:zeyad_ali_portfolio/utils/constants.dart';
 import 'package:zeyad_ali_portfolio/utils/widgets_keys.dart';
 import 'package:zeyad_ali_portfolio/widgets/about_me_text.dart';
@@ -20,7 +21,7 @@ class DesktopAboutMeSection extends StatelessWidget {
         children: [
           const SizedBox(height: Constants.kDesktopVerticalPadding),
           // ignore: prefer_const_constructors
-          SectionHeader(headerText: 'About Me'),
+          SectionHeader(headerText: context.tr.about_me),
           const SizedBox(height: Constants.kDesktopVerticalPadding),
           // ignore: prefer_const_constructors
           Row(

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:zeyad_ali_portfolio/cubits/app_localization_cubit/app_localization_cubit.dart';
 import 'package:zeyad_ali_portfolio/cubits/app_theme_cubit/app_theme_cubit.dart';
+import 'package:zeyad_ali_portfolio/localization/localization_extenstion.dart';
 import 'package:zeyad_ali_portfolio/models/app_bar_button_model.dart';
 import 'package:zeyad_ali_portfolio/utils/app_theme.dart';
 import 'package:zeyad_ali_portfolio/utils/assets.dart';
@@ -53,7 +55,7 @@ class CustomDrawer extends StatelessWidget {
                           scaffoldKey.currentState?.closeEndDrawer();
                           await Scrollable.ensureVisible(WidgetsKeys.aboutKey.currentContext!, duration: const Duration(seconds: 1));
                         },
-                        text: 'About Me',
+                        text: context.tr.about_me,
                       ),
                     ),
                     const SizedBox(height: 15),
@@ -63,7 +65,7 @@ class CustomDrawer extends StatelessWidget {
                           scaffoldKey.currentState?.closeEndDrawer();
                           await Scrollable.ensureVisible(WidgetsKeys.mySkillsKey.currentContext!, duration: const Duration(seconds: 1));
                         },
-                        text: 'My Skills',
+                        text: context.tr.my_skills,
                       ),
                     ),
                     const SizedBox(height: 15),
@@ -73,7 +75,7 @@ class CustomDrawer extends StatelessWidget {
                           scaffoldKey.currentState?.closeEndDrawer();
                           await Scrollable.ensureVisible(WidgetsKeys.projectsKey.currentContext!, duration: const Duration(seconds: 1));
                         },
-                        text: 'Projects',
+                        text: context.tr.projects,
                       ),
                     ),
                     const SizedBox(height: 15),
@@ -83,7 +85,7 @@ class CustomDrawer extends StatelessWidget {
                           scaffoldKey.currentState?.closeEndDrawer();
                           await Scrollable.ensureVisible(WidgetsKeys.contactMeKey.currentContext!, duration: const Duration(seconds: 1));
                         },
-                        text: 'Contact Me',
+                        text: context.tr.contact_me,
                       ),
                     ),
                     const SizedBox(height: 30),
@@ -105,7 +107,7 @@ class CustomDrawer extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        "Dark Mode",
+                        context.tr.dark_mode,
                         style: TextStyle(
                           color: AppTheme.primaryTextColor,
                           fontSize: getResponsiveFontSize(15, context),
@@ -123,26 +125,32 @@ class CustomDrawer extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 15),
-                  // TextButton(
-                  //   child: Text(
-                  //     "العربية",
-                  //     style: TextStyle(
-                  //       color: AppTheme.primaryTextColor,
-                  //       fontSize: getResponsiveFontSize(14, context),
-                  //     ),
-                  //   ),
-                  //   onPressed: () {},
-                  // ),
-                  // TextButton(
-                  //   child: Text(
-                  //     "English",
-                  //     style: TextStyle(
-                  //       color: AppTheme.primaryTextColor,
-                  //       fontSize: getResponsiveFontSize(14, context),
-                  //     ),
-                  //   ),
-                  //   onPressed: () {},
-                  // ),
+                  if (BlocProvider.of<AppLocalizationCubit>(context).appLocale == Constants.english)
+                    TextButton(
+                      child: Text(
+                        "العربية",
+                        style: TextStyle(
+                          color: AppTheme.primaryTextColor,
+                          fontSize: getResponsiveFontSize(14, context),
+                        ),
+                      ),
+                      onPressed: () {
+                        BlocProvider.of<AppLocalizationCubit>(context).changeLocale(Constants.arabic);
+                      },
+                    )
+                  else
+                    TextButton(
+                      child: Text(
+                        "English",
+                        style: TextStyle(
+                          color: AppTheme.primaryTextColor,
+                          fontSize: getResponsiveFontSize(14, context),
+                        ),
+                      ),
+                      onPressed: () {
+                        BlocProvider.of<AppLocalizationCubit>(context).changeLocale(Constants.english);
+                      },
+                    ),
                   const SizedBox(height: Constants.kDesktopVerticalPadding),
                 ],
               ),

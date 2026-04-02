@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zeyad_ali_portfolio/localization/localization_extenstion.dart';
 import 'package:zeyad_ali_portfolio/utils/app_theme.dart';
 import 'package:zeyad_ali_portfolio/utils/responsive_font_size.dart';
 
@@ -14,7 +15,7 @@ class IdentificationIntroText extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              'Hello, ',
+              context.tr.hello,
               style: TextStyle(
                 color: AppTheme.primaryTextColor,
                 fontSize: getResponsiveFontSize(22, context),
@@ -22,7 +23,7 @@ class IdentificationIntroText extends StatelessWidget {
               ),
             ),
             Text(
-              "I'm",
+              context.tr.iam,
               style: TextStyle(
                 color: Colors.red,
                 fontSize: getResponsiveFontSize(22, context),
@@ -32,7 +33,7 @@ class IdentificationIntroText extends StatelessWidget {
           ],
         ),
         Text(
-          'Zeyad Ali',
+          context.tr.zeyad_ali,
           style: TextStyle(
             color: AppTheme.primaryTextColor,
             fontSize: getResponsiveFontSize(52, context),
@@ -40,7 +41,7 @@ class IdentificationIntroText extends StatelessWidget {
           ),
         ),
         Text(
-          'Mobile Developer',
+          context.tr.mobile_developer,
           style: TextStyle(
             color: AppTheme.primaryTextColor,
             fontSize: getResponsiveFontSize(22, context),
@@ -49,7 +50,7 @@ class IdentificationIntroText extends StatelessWidget {
         ),
         const SizedBox(height: 25),
         Text(
-          "Passionate Flutter Developer with extensive experience in creating user-focused mobile applications using Flutter, Bloc, and Clean Architecture. Proficient in state management, API integrations, Firebase, and AI model implementations. Skilled in crafting adaptive and responsive UIs while delivering innovative solutions to complex challenges.",
+          context.tr.introduction,
           style: TextStyle(
             color: AppTheme.bodyTextColor,
           ),
