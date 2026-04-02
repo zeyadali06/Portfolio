@@ -58,7 +58,8 @@ class AppLocalizationsEn extends AppLocalizations {
       'I have worked on several projects, ranging from personal to professional applications, showcasing my ability to handle different aspects of app development, including UI/UX design, Backend Integration, and advanced features like speech AI.';
 
   @override
-  String get about_4 => 'When I\'m not coding, I enjoy exploring new tools, refining my skills, and contributing to projects that inspire me.';
+  String get about_4 =>
+      'When I\'m not coding, I enjoy exploring new tools, refining my skills, and contributing to projects that inspire me.';
 
   @override
   String get conclusion => 'Thank you for visiting my portfolio!';
