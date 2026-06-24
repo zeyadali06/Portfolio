@@ -245,7 +245,7 @@ abstract class AppLocalizations {
   /// No description provided for @tennis_app_description.
   ///
   /// In en, this message translates to:
-  /// **'The Tennis App helps players plan training sessions using weather forecasts. Built with Flutter, it supports location management, authentication, and a clean MVVM architecture. It integrates a machine learning model to predict optimal training times based on weather data.'**
+  /// **'Developed a Flutter-based Tennis Training Assistant that combines weather forecasting, Google Maps integration, and machine learning to help players identify optimal training times. Implemented authentication, location management, interactive maps, and a scalable MVVM architecture. Integrated a custom AI model to analyze weather data and provide personalized training recommendations.'**
   String get tennis_app_description;
 
   /// No description provided for @fashion_app_name.

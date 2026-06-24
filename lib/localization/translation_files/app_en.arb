@@ -23,7 +23,7 @@
     "meal_recommendation_app_name": "Meal Recommendation",
     "meal_recommendation_app_description": "The Meal Recommendation App is a Flutter-based app that suggests meals based on user preferences. It uses Firebase for authentication and the Gemini AI model for recommendations. Users receive personalized meal suggestions along with ingredient lists.\nIn this project, my role included developing the splash screen, profile screen, meal details screen, and implementing the favorite icon functionality to allow users to save their preferred meals.",
     "tennis_app_name": "Tennis",
-    "tennis_app_description": "The Tennis App helps players plan training sessions using weather forecasts. Built with Flutter, it supports location management, authentication, and a clean MVVM architecture. It integrates a machine learning model to predict optimal training times based on weather data.",
+    "tennis_app_description": "Developed a Flutter-based Tennis Training Assistant that combines weather forecasting, Google Maps integration, and machine learning to help players identify optimal training times. Implemented authentication, location management, interactive maps, and a scalable MVVM architecture. Integrated a custom AI model to analyze weather data and provide personalized training recommendations.",
     "fashion_app_name": "Fashion",
     "fashion_app_description": "The Fashion App, built with Flutter, offers a seamless shopping experience for clothing items. It features user authentication, profile management, and organized categories for easy browsing. Users can view product details, manage their cart, and track orders effortlessly.",
     "todo_app_name": "ToDo",

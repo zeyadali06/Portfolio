@@ -8,53 +8,104 @@ import 'package:zeyad_ali_portfolio/utils/assets.dart';
 
 final class ProjectsManager {
   static Map<ToolType, ToolModel> allTools = {
-    ToolType.flutter: const ToolModel(text: 'Flutter', url: 'https://flutter.dev/'),
+    ToolType.flutter:
+        const ToolModel(text: 'Flutter', url: 'https://flutter.dev/'),
     ToolType.dart: const ToolModel(text: 'Dart', url: 'https://dart.dev/'),
-    ToolType.lottie: const ToolModel(text: 'Lottie Animations', url: 'https://lottiefiles.com/'),
+    ToolType.lottie: const ToolModel(
+        text: 'Lottie Animations', url: 'https://lottiefiles.com/'),
     ToolType.animations: const ToolModel(text: 'Animations'),
-    ToolType.cubit: const ToolModel(text: 'Cubit', url: 'https://pub.dev/packages/flutter_bloc'),
-    ToolType.bloc: const ToolModel(text: 'Bloc', url: 'https://pub.dev/packages/flutter_bloc'),
-    ToolType.getX: const ToolModel(text: 'GetX', url: 'https://pub.dev/packages/get'),
-    ToolType.provider: const ToolModel(text: 'Provider', url: 'https://pub.dev/packages/provider'),
-    ToolType.riverpod: const ToolModel(text: 'Riverpod', url: 'https://pub.dev/packages/riverpod'),
+    ToolType.cubit: const ToolModel(
+        text: 'Cubit', url: 'https://pub.dev/packages/flutter_bloc'),
+    ToolType.bloc: const ToolModel(
+        text: 'Bloc', url: 'https://pub.dev/packages/flutter_bloc'),
+    ToolType.getX:
+        const ToolModel(text: 'GetX', url: 'https://pub.dev/packages/get'),
+    ToolType.provider: const ToolModel(
+        text: 'Provider', url: 'https://pub.dev/packages/provider'),
+    ToolType.riverpod: const ToolModel(
+        text: 'Riverpod', url: 'https://pub.dev/packages/riverpod'),
     ToolType.restfulApi: const ToolModel(text: 'Restful Api'),
-    ToolType.socketIo: const ToolModel(text: 'Socket.io', url: 'https://socket.io/'),
-    ToolType.dio: const ToolModel(text: 'Dio', url: 'https://pub.dev/packages/dio'),
-    ToolType.http: const ToolModel(text: 'Http', url: 'https://pub.dev/packages/http'),
-    ToolType.postman: const ToolModel(text: 'Postman', url: 'https://www.postman.com/'),
-    ToolType.firebase: const ToolModel(text: 'Firebase', url: 'https://firebase.google.com/'),
-    ToolType.supabase: const ToolModel(text: 'Supabase', url: 'https://supabase.com/'),
-    ToolType.hive: const ToolModel(text: 'Hive', url: 'https://pub.dev/packages/hive_flutter/versions'),
-    ToolType.flutter_secure_storage: const ToolModel(text: 'Flutter Secure Storage', url: 'https://pub.dev/packages/flutter_secure_storage'),
-    ToolType.shared_preferences: const ToolModel(text: 'Shared Preferences', url: 'https://pub.dev/packages/shared_preferences'),
-    ToolType.git_github: const ToolModel(text: 'Git\\GitHub', url: 'https://github.com/'),
+    ToolType.socketIo:
+        const ToolModel(text: 'Socket.io', url: 'https://socket.io/'),
+    ToolType.dio:
+        const ToolModel(text: 'Dio', url: 'https://pub.dev/packages/dio'),
+    ToolType.http:
+        const ToolModel(text: 'Http', url: 'https://pub.dev/packages/http'),
+    ToolType.postman:
+        const ToolModel(text: 'Postman', url: 'https://www.postman.com/'),
+    ToolType.firebase:
+        const ToolModel(text: 'Firebase', url: 'https://firebase.google.com/'),
+    ToolType.supabase:
+        const ToolModel(text: 'Supabase', url: 'https://supabase.com/'),
+    ToolType.hive: const ToolModel(
+        text: 'Hive', url: 'https://pub.dev/packages/hive_flutter/versions'),
+    ToolType.flutter_secure_storage: const ToolModel(
+        text: 'Flutter Secure Storage',
+        url: 'https://pub.dev/packages/flutter_secure_storage'),
+    ToolType.shared_preferences: const ToolModel(
+        text: 'Shared Preferences',
+        url: 'https://pub.dev/packages/shared_preferences'),
+    ToolType.git_github:
+        const ToolModel(text: 'Git\\GitHub', url: 'https://github.com/'),
     ToolType.agile: const ToolModel(text: 'Agile'),
-    ToolType.trello: const ToolModel(text: 'Trello', url: 'https://trello.com/'),
-    ToolType.jira: const ToolModel(text: 'Jira', url: 'https://www.atlassian.com/software/jira'),
-    ToolType.figma: const ToolModel(text: 'Figma', url: 'https://www.figma.com/'),
+    ToolType.trello:
+        const ToolModel(text: 'Trello', url: 'https://trello.com/'),
+    ToolType.jira: const ToolModel(
+        text: 'Jira', url: 'https://www.atlassian.com/software/jira'),
+    ToolType.figma:
+        const ToolModel(text: 'Figma', url: 'https://www.figma.com/'),
     ToolType.adobe: const ToolModel(text: 'Adobe'),
     ToolType.ai_integration: const ToolModel(text: 'Ai Integration'),
-    ToolType.gemini: const ToolModel(text: 'Gemini', url: 'https://gemini.google.com/app'),
-    ToolType.chatgpt: const ToolModel(text: 'ChatGpt', url: 'https://chatgpt.com/'),
-    ToolType.deepseek: const ToolModel(text: 'DeepSeek', url: 'https://www.deepseek.com/'),
-    ToolType.stripe: const ToolModel(text: 'Stripe', url: 'https://stripe.com/'),
-    ToolType.getIt: const ToolModel(text: 'Get_It', url: 'https://pub.dev/packages/get_it'),
-    ToolType.audioplayers: const ToolModel(text: 'Audioplayers', url: 'https://pub.dev/packages/audioplayers'),
-    ToolType.avatarGlow: const ToolModel(text: 'Avatar_Glow', url: 'https://pub.dev/packages/avatar_glow'),
-    ToolType.deviceInfoPlus: const ToolModel(text: 'Device_Info_Plus', url: 'https://pub.dev/packages/device_info_plus'),
-    ToolType.filePicker: const ToolModel(text: 'File_Picker', url: 'https://pub.dev/packages/file_picker'),
-    ToolType.flutterSound: const ToolModel(text: 'Flutter_Sound', url: 'https://pub.dev/packages/flutter_sound'),
-    ToolType.fontAwesomeFlutter: const ToolModel(text: 'Font_Awesome_Flutter', url: 'https://pub.dev/packages/font_awesome_flutter'),
-    ToolType.goRouter: const ToolModel(text: 'Go_Router', url: 'https://pub.dev/packages/go_router'),
-    ToolType.googleFonts: const ToolModel(text: 'Google_Fonts', url: 'https://pub.dev/packages/google_fonts'),
-    ToolType.iconsLauncher: const ToolModel(text: 'Icons_Launcher', url: 'https://pub.dev/packages/icons_launcher'),
-    ToolType.imagePicker: const ToolModel(text: 'Image_Picker', url: 'https://pub.dev/packages/image_picker'),
-    ToolType.injectable: const ToolModel(text: 'Injectable', url: 'https://pub.dev/packages/injectable'),
-    ToolType.modalProgressHudNsn: const ToolModel(text: 'Modal_Progress_HUD_NSN', url: 'https://pub.dev/packages/modal_progress_hud_nsn'),
-    ToolType.pathProvider: const ToolModel(text: 'Path_Provider', url: 'https://pub.dev/packages/path_provider'),
-    ToolType.permissionHandler: const ToolModel(text: 'Permission_Handler', url: 'https://pub.dev/packages/permission_handler'),
-    ToolType.pinCodeFields: const ToolModel(text: 'Pin_Code_Fields', url: 'https://pub.dev/packages/pin_code_fields'),
-    ToolType.urlLauncher: const ToolModel(text: 'URL_Launcher', url: 'https://pub.dev/packages/url_launcher'),
+    ToolType.gemini:
+        const ToolModel(text: 'Gemini', url: 'https://gemini.google.com/app'),
+    ToolType.chatgpt:
+        const ToolModel(text: 'ChatGpt', url: 'https://chatgpt.com/'),
+    ToolType.deepseek:
+        const ToolModel(text: 'DeepSeek', url: 'https://www.deepseek.com/'),
+    ToolType.stripe:
+        const ToolModel(text: 'Stripe', url: 'https://stripe.com/'),
+    ToolType.getIt:
+        const ToolModel(text: 'Get It', url: 'https://pub.dev/packages/get_it'),
+    ToolType.audioplayers: const ToolModel(
+        text: 'Audioplayers', url: 'https://pub.dev/packages/audioplayers'),
+    ToolType.avatarGlow: const ToolModel(
+        text: 'Avatar Glow', url: 'https://pub.dev/packages/avatar_glow'),
+    ToolType.deviceInfoPlus: const ToolModel(
+        text: 'Device Info Plus',
+        url: 'https://pub.dev/packages/device_info_plus'),
+    ToolType.filePicker: const ToolModel(
+        text: 'File Picker', url: 'https://pub.dev/packages/file_picker'),
+    ToolType.flutterSound: const ToolModel(
+        text: 'Flutter Sound', url: 'https://pub.dev/packages/flutter_sound'),
+    ToolType.fontAwesomeFlutter: const ToolModel(
+        text: 'Font Awesome Flutter',
+        url: 'https://pub.dev/packages/font_awesome_flutter'),
+    ToolType.goRouter: const ToolModel(
+        text: 'Go Router', url: 'https://pub.dev/packages/go_router'),
+    ToolType.googleFonts: const ToolModel(
+        text: 'Google Fonts', url: 'https://pub.dev/packages/google_fonts'),
+    ToolType.iconsLauncher: const ToolModel(
+        text: 'Icons Launcher', url: 'https://pub.dev/packages/icons_launcher'),
+    ToolType.imagePicker: const ToolModel(
+        text: 'Image Picker', url: 'https://pub.dev/packages/image_picker'),
+    ToolType.injectable: const ToolModel(
+        text: 'Injectable', url: 'https://pub.dev/packages/injectable'),
+    ToolType.modalProgressHudNsn: const ToolModel(
+        text: 'Modal Progress HUD NSN',
+        url: 'https://pub.dev/packages/modal_progress_hud_nsn'),
+    ToolType.pathProvider: const ToolModel(
+        text: 'Path Provider', url: 'https://pub.dev/packages/path_provider'),
+    ToolType.permissionHandler: const ToolModel(
+        text: 'Permission Handler',
+        url: 'https://pub.dev/packages/permission_handler'),
+    ToolType.pinCodeFields: const ToolModel(
+        text: 'Pin Code Fields',
+        url: 'https://pub.dev/packages/pin_code_fields'),
+    ToolType.urlLauncher: const ToolModel(
+        text: 'URL Launcher', url: 'https://pub.dev/packages/url_launcher'),
+    ToolType.googleMaps: const ToolModel(
+        text: 'Google Maps',
+        url: 'https://pub.dev/packages/google_maps_flutter'),
     ToolType.cleanArchitecture: const ToolModel(text: 'Clean Architecture'),
     ToolType.mvvm: const ToolModel(text: 'MVVM'),
     ToolType.mvc: const ToolModel(text: 'MVC'),
@@ -129,7 +180,8 @@ final class ProjectsManager {
           ],
         ),
         githubUrl: "https://github.com/Mohamedihab29592/meal-recommendation-A2",
-        designUrl: "https://www.figma.com/design/zDyccAigoAviKiU5EsczkX/Recipes?node-id=0-1&p=f&t=D2Y6algmowYU78OL-0",
+        designUrl:
+            "https://www.figma.com/design/zDyccAigoAviKiU5EsczkX/Recipes?node-id=0-1&p=f&t=D2Y6algmowYU78OL-0",
       ),
       ProjectModel(
         title: context.tr.tennis_app_name,
@@ -142,6 +194,7 @@ final class ProjectsManager {
             ToolType.dio,
             ToolType.firebase,
             ToolType.getIt,
+            ToolType.googleMaps,
             ToolType.cleanArchitecture,
             ToolType.ai_integration,
             ToolType.git_github,
@@ -166,7 +219,8 @@ final class ProjectsManager {
           ],
         ),
         githubUrl: "https://github.com/mahmoud-hassan1/Fashion-App",
-        designUrl: "https://www.figma.com/design/eIEoyAf3TliYntkTH2gxYE/E-Commerce-App-Design-(Community)?node-id=0-1&node-type=canvas&t=jmSkhSwHQerBkkc5-0",
+        designUrl:
+            "https://www.figma.com/design/eIEoyAf3TliYntkTH2gxYE/E-Commerce-App-Design-(Community)?node-id=0-1&node-type=canvas&t=jmSkhSwHQerBkkc5-0",
       ),
       ProjectModel(
         title: context.tr.todo_app_name,
@@ -182,7 +236,8 @@ final class ProjectsManager {
             ToolType.git_github,
           ],
         ),
-        githubUrl: 'https://github.com/zeyadali06/Teknosoft-tasks/tree/main/To-Do%20List%20App',
+        githubUrl:
+            'https://github.com/zeyadali06/Teknosoft-tasks/tree/main/To-Do%20List%20App',
       ),
     ];
   }
@@ -252,6 +307,7 @@ enum ToolType {
   permissionHandler,
   pinCodeFields,
   urlLauncher,
+  googleMaps,
   cleanArchitecture,
   mvvm,
   mvc;
