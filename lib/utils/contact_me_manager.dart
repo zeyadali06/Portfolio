@@ -21,7 +21,7 @@ final class ContactMeManager {
         },
       ),
       ContactMeItemModel(
-        icon: Icons.mail,
+        icon: FontAwesomeIcons.envelope,
         title: 'zeyadali6060@gmail.com',
         onPressed: () async {
           await launchUrl(Uri(scheme: 'mailto', path: 'zeyadali6060@gmail.com'), mode: LaunchMode.externalApplication);

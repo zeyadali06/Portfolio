@@ -211,6 +211,8 @@ final class ProjectsManager {
             ToolType.flutter,
             ToolType.cubit,
             ToolType.firebase,
+            ToolType.supabase,
+            ToolType.stripe,
             ToolType.getIt,
             ToolType.cleanArchitecture,
             ToolType.flutter_secure_storage,

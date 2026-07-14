@@ -97,7 +97,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get fashion_app_description =>
-      'The Fashion App, built with Flutter, offers a seamless shopping experience for clothing items. It features user authentication, profile management, and organized categories for easy browsing. Users can view product details, manage their cart, and track orders effortlessly.';
+      'The Fashion App is a Flutter-based e-commerce application that provides a seamless shopping experience for clothing items. It features user authentication, profile management, organized product categories, detailed product views, shopping cart management, and order tracking. The app also integrates Stripe for secure online payments and uses Supabase Storage for managing product images, while following the MVVM architecture with Bloc for clean and maintainable state management.';
 
   @override
   String get todo_app_name => 'ToDo';

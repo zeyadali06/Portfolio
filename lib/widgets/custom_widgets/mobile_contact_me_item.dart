@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:zeyad_ali_portfolio/models/contact_me_item_model.dart';
 import 'package:zeyad_ali_portfolio/utils/app_theme.dart';
 import 'package:zeyad_ali_portfolio/widgets/custom_widgets/custom_item_container.dart';
@@ -14,7 +15,7 @@ class MobileContactMeItem extends StatelessWidget {
       onTap: model.onPressed,
       child: CustomContainer(
         color: AppTheme.projectCardToolItemColor,
-        child: Icon(
+        child: FaIcon(
           model.icon,
           color: AppTheme.iconColor,
         ),

@@ -35,6 +35,11 @@ final class MySkillsManager {
         url: 'https://firebase.google.com/',
       ),
       MySkillsItemModel(
+        title: 'Supabase',
+        path: Assets.skillsIconsSupabase,
+        url: 'https://supabase.com/',
+      ),
+      MySkillsItemModel(
         title: 'Git',
         path: Assets.skillsIconsGit,
         url: 'https://git-scm.com/',
@@ -58,6 +63,11 @@ final class MySkillsManager {
         title: 'Google Maps',
         path: Assets.skillsIconsGoogleMaps,
         url: 'https://www.google.com/maps',
+      ),
+      MySkillsItemModel(
+        title: 'Stripe',
+        path: Assets.skillsIconsStripe,
+        url: 'https://stripe.com/',
       ),
     ];
   }

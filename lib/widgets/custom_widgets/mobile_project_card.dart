@@ -69,7 +69,7 @@ class MobileProjectCard extends StatelessWidget {
                 child: IconButton(
                   onPressed: () async => await launchUrl(Uri.parse(project.githubUrl)),
                   color: AppTheme.avatarBackgroundColor,
-                  icon: Icon(
+                  icon: FaIcon(
                     FontAwesomeIcons.github,
                     color: AppTheme.iconColor,
                   ),
@@ -87,7 +87,7 @@ class MobileProjectCard extends StatelessWidget {
                   child: IconButton(
                     onPressed: () async => await launchUrl(Uri.parse(project.designUrl!)),
                     color: AppTheme.avatarBackgroundColor,
-                    icon: Icon(
+                    icon: FaIcon(
                       FontAwesomeIcons.figma,
                       color: AppTheme.iconColor,
                     ),

@@ -78,9 +78,9 @@ class Assets {
   /// assets/skillsIcons/GitHub.png
   static const String skillsIconsGitHub = "assets/skillsIcons/GitHub.png";
 
-  /// Assets for skillsIconsGoogle Maps
-  /// assets/skillsIcons/Google Maps.png
-  static const String skillsIconsGoogleMaps = "assets/skillsIcons/Google Maps.png";
+  /// Assets for skillsIconsGoogleMaps
+  /// assets/skillsIcons/GoogleMaps.png
+  static const String skillsIconsGoogleMaps = "assets/skillsIcons/GoogleMaps.png";
 
   /// Assets for skillsIconsJava
   /// assets/skillsIcons/Java.png
@@ -101,6 +101,14 @@ class Assets {
   /// Assets for skillsIconsSocketIo
   /// assets/skillsIcons/Socket.io.png
   static const String skillsIconsSocketIo = "assets/skillsIcons/Socket.io.png";
+
+  /// Assets for skillsIconsStripe
+  /// assets/skillsIcons/Stripe.png
+  static const String skillsIconsStripe = "assets/skillsIcons/Stripe.png";
+
+  /// Assets for skillsIconsSupabase
+  /// assets/skillsIcons/Supabase.png
+  static const String skillsIconsSupabase = "assets/skillsIcons/Supabase.png";
 
   /// Assets for skillsIconsTrello
   /// assets/skillsIcons/Trello.png
