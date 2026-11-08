@@ -9,12 +9,15 @@ class SectionHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      headerText,
-      style: TextStyle(
-        color: AppTheme.primaryTextColor,
-        fontWeight: FontWeight.bold,
-        fontSize: getResponsiveFontSize(32, context),
+    return Semantics(
+      header: true,
+      child: Text(
+        headerText,
+        style: TextStyle(
+          color: AppTheme.primaryTextColor,
+          fontWeight: FontWeight.bold,
+          fontSize: getResponsiveFontSize(32, context),
+        ),
       ),
     );
   }

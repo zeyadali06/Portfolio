@@ -22,12 +22,15 @@ class MobileProjectCard extends StatelessWidget {
         children: [
           CustomContainer(
             color: AppTheme.projectCardTitleColor,
-            child: Text(
-              project.title,
-              style: TextStyle(
-                color: AppTheme.primaryTextColor,
-                fontSize: getResponsiveFontSize(18, context),
-                fontWeight: FontWeight.bold,
+            child: Semantics(
+              header: true,
+              child: Text(
+                project.title,
+                style: TextStyle(
+                  color: AppTheme.primaryTextColor,
+                  fontSize: getResponsiveFontSize(18, context),
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
           ),
@@ -36,6 +39,7 @@ class MobileProjectCard extends StatelessWidget {
             clipBehavior: Clip.hardEdge,
             borderRadius: BorderRadius.circular(10),
             child: Image.asset(
+              semanticLabel: '${project.title} project preview',
               project.imagePath,
             ),
           ),
@@ -67,7 +71,9 @@ class MobileProjectCard extends StatelessWidget {
                 animate: true,
                 curve: Curves.easeInOutCubic,
                 child: IconButton(
-                  onPressed: () async => await launchUrl(Uri.parse(project.githubUrl)),
+                  tooltip: 'View ${project.title} source code on GitHub',
+                  onPressed: () async =>
+                      await launchUrl(Uri.parse(project.githubUrl)),
                   color: AppTheme.avatarBackgroundColor,
                   icon: FaIcon(
                     FontAwesomeIcons.github,
@@ -85,7 +91,9 @@ class MobileProjectCard extends StatelessWidget {
                   animate: true,
                   curve: Curves.easeInOutCubic,
                   child: IconButton(
-                    onPressed: () async => await launchUrl(Uri.parse(project.designUrl!)),
+                    tooltip: 'View ${project.title} design on Figma',
+                    onPressed: () async =>
+                        await launchUrl(Uri.parse(project.designUrl!)),
                     color: AppTheme.avatarBackgroundColor,
                     icon: FaIcon(
                       FontAwesomeIcons.figma,

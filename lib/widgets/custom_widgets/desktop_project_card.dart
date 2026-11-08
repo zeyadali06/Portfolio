@@ -22,12 +22,15 @@ class DesktopProjectCard extends StatelessWidget {
         children: [
           CustomContainer(
             color: AppTheme.projectCardTitleColor,
-            child: Text(
-              project.title,
-              style: TextStyle(
-                color: AppTheme.primaryTextColor,
-                fontSize: getResponsiveFontSize(18, context),
-                fontWeight: FontWeight.bold,
+            child: Semantics(
+              header: true,
+              child: Text(
+                project.title,
+                style: TextStyle(
+                  color: AppTheme.primaryTextColor,
+                  fontSize: getResponsiveFontSize(18, context),
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
           ),
@@ -40,6 +43,7 @@ class DesktopProjectCard extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                   child: Image.asset(
                     project.imagePath,
+                    semanticLabel: '${project.title} project preview',
                   ),
                 ),
               ),
@@ -59,7 +63,8 @@ class DesktopProjectCard extends StatelessWidget {
                       alignment: WrapAlignment.start,
                       spacing: 15,
                       runSpacing: 15,
-                      children: List.generate(project.tools.length, (int index) {
+                      children:
+                          List.generate(project.tools.length, (int index) {
                         return ToolItem(tool: project.tools[index]);
                       }),
                     ),
@@ -74,7 +79,10 @@ class DesktopProjectCard extends StatelessWidget {
                           animate: true,
                           curve: Curves.easeInOutCubic,
                           child: IconButton(
-                            onPressed: () async => await launchUrl(Uri.parse(project.githubUrl)),
+                            tooltip:
+                                'View ${project.title} source code on GitHub',
+                            onPressed: () async =>
+                                await launchUrl(Uri.parse(project.githubUrl)),
                             color: AppTheme.avatarBackgroundColor,
                             icon: FaIcon(
                               FontAwesomeIcons.github,
@@ -92,7 +100,9 @@ class DesktopProjectCard extends StatelessWidget {
                             animate: true,
                             curve: Curves.easeInOutCubic,
                             child: IconButton(
-                              onPressed: () async => await launchUrl(Uri.parse(project.designUrl!)),
+                              tooltip: 'View ${project.title} design on Figma',
+                              onPressed: () async => await launchUrl(
+                                  Uri.parse(project.designUrl!)),
                               color: AppTheme.avatarBackgroundColor,
                               icon: FaIcon(
                                 FontAwesomeIcons.figma,

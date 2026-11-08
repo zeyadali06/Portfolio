@@ -32,20 +32,26 @@ class IdentificationIntroText extends StatelessWidget {
             ),
           ],
         ),
-        Text(
-          context.tr.zeyad_ali,
-          style: TextStyle(
-            color: AppTheme.primaryTextColor,
-            fontSize: getResponsiveFontSize(52, context),
-            fontWeight: FontWeight.bold,
+        Semantics(
+          header: true,
+          child: Text(
+            context.tr.zeyad_ali,
+            style: TextStyle(
+              color: AppTheme.primaryTextColor,
+              fontSize: getResponsiveFontSize(52, context),
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
-        Text(
-          context.tr.mobile_developer,
-          style: TextStyle(
-            color: AppTheme.primaryTextColor,
-            fontSize: getResponsiveFontSize(22, context),
-            fontWeight: FontWeight.w600,
+        Semantics(
+          header: true,
+          child: Text(
+            context.tr.mobile_developer,
+            style: TextStyle(
+              color: AppTheme.primaryTextColor,
+              fontSize: getResponsiveFontSize(22, context),
+              fontWeight: FontWeight.w600,
+            ),
           ),
         ),
         const SizedBox(height: 25),
